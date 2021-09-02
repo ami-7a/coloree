@@ -1,19 +1,8 @@
 
-/*メイン*/
-main{
-  max-width: 85%;
-  margin: 0 auto;
-  height: 310vh;/*メインの量に合わせて変える*/
-  padding-top: 20vh;
-  /*background-color: antiquewhite;*/ /*mainの高さ検証の為*/
-}
-
-
-
 .flex{
   display: flex;
-  width: 100%;
-  margin-top: 13vh;
+  width: 90%;
+  margin: 10vh auto;
 }
 
 .flex .mini-img{
@@ -22,38 +11,34 @@ main{
 
 .flex .mini-img img{
   width: 100%;
-  height: 93%;
+  height: 85%;
   object-fit: cover;
 }
 
-.flex-txt{
+.flex .flex-txt{
   width: 50%;
+  padding: 1% 5%;
 }
 
-.flex-txt1, .flex-txt3{
-  padding-top: 1vh ;
-  padding-left: 5vw ;
+.standard .flex-txt,
+.premier .flex-txt{
+  padding-left: 6vw ;
 }
 
-.flex-txt2{
-  padding-top: 1vh ;
-  padding-right: 5vw ;
+.simple .flex-txt{
+  padding-right: 4vw;
 }
-
-
 
 /*コンテンツごとのタイトル*/
 .flex-txt h3{
   font-size: 2rem;
   font-weight: normal;
-  letter-spacing: .2vw;
   margin-bottom: .2vh;
 }
 
 /*コンテンツ内のそれぞれテキスト*/
 .flex-txt .long-txt{
   margin-top: 2vh;
-  letter-spacing: .02vw;
   line-height: 4vh;
 }
 
@@ -63,7 +48,7 @@ dl {
   display: flex;
   flex-wrap: wrap;
   border: .7px solid #ffece0;
-  width: 90%;
+  width: 95%;
 }
 
 dl dt {
@@ -93,17 +78,10 @@ dl dd:nth-of-type(5){
 
 @media screen and (max-width:1024px) {
 
- /*メイン*/
-  main{
-    max-width: 98vw;
-    height: auto;
-  }
-
   .flex{
     flex-direction: column;
     width: 100vw;
     text-align: center;
-
   }
 
   .flex .mini-img{
@@ -112,23 +90,22 @@ dl dd:nth-of-type(5){
 
   .flex .mini-img img{
     width: 100vw;
-    height: 35vh;
+    height: 40vh;
     object-fit: cover;
   }
 
-  .flex-txt{
+  .flex .flex-txt{
     width: 100%;
     margin: 5vh auto ;
   }
 
-  .flex-txt1, .flex-txt3{
-    padding-top: 0vh ;
-    padding-left: 0vw ;
+  .standard .flex-txt,
+  .premier .flex-txt{
+    padding-left: 3vw ;
   }
 
-  .flex-txt2{
-    padding-top: 0vh ;
-    padding-right: 0vw ;
+  .simple .flex-txt{
+    padding-right: 3vw;
   }
 
   .simple{
@@ -137,27 +114,23 @@ dl dd:nth-of-type(5){
 
   /*コンテンツごとのタイトル*/
   .flex-txt h3{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
   
   .flex-txt p{
-    font-size: .9em;
+    font-size: .8em;
   }
 
-  /*コンテンツ内のそれぞれテキスト*/
+  /* コンテンツ内のそれぞれテキスト */
   .flex-txt .long-txt{
-    width: 88vw;
+    width: 80vw;
     margin: 4vh auto;
-
   }
 
   /*dlリスト*/
   dl {
-    margin: 0 auto;
+    width: 90%;
+    margin: 3vh auto;
   }
-
 }
-
-
-
 

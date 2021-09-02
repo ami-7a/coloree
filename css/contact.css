@@ -1,25 +1,4 @@
 
-/*メイン*/
-main{
-  max-width: 85%;
-  margin: 0 auto;
-  height: 230vh;/*メインの量に合わせて変える*/
-  padding-top: 20vh;
-  /*background-color: antiquewhite;*/ /*mainの高さ検証の為*/
-}
-
-h2{
-  width: 30vw;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 1.3rem;
-  letter-spacing: .2vw;
-  color: whitesmoke;
-  background-color: #aca49c;
-  border: 1px solid #aca49c;
-  padding: 1vh 1vw;
-  border-radius: 20px;
-}
 
 .fa-envelope{
   margin-left: 1vw;
@@ -106,16 +85,16 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
 /*form全体*/
 #form {
   position: relative;
-  width: 500px;
-  margin: 50px auto ;
+  width: 60%;
+  margin: 15vh auto 0vh;
 }
 
 /*input*/
 input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  width: 500px;
-  height: 50px;
+  width: 45vw;
+  height: 7vh;
   padding: 0px 15px 0px 15px;
   
   background: transparent;/*背景色*/
@@ -139,10 +118,10 @@ input:hover {
 
 /*textarea*/
 textarea {
-  width: 500px;
-  max-width: 500px;
-  height: 110px;
-  max-height: 110px;
+  width: 45vw;
+  max-width: 45vw;
+  height: 15vh;
+  max-height: 20vh;
   padding: 15px;
   
   background: transparent;/*背景色*/
@@ -168,7 +147,7 @@ textarea:hover {
 
 /*submit送信*/
 #submit {
-  width: 500px;
+  width: 45vw;
   
   padding: 0;
   margin: -5px 0px 120px 0px;
@@ -189,141 +168,31 @@ textarea:hover {
   color: #e2dedb;
 }
 
-/*お電話でのお問い合わせ*/
-.tell-number{
-  margin: 5vh auto 4vh;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 2em;
-  
-}
-
-.tell-number a{
-  color: #b3aca7;
-}
-
-/*phoneのアイコン*/
-.fa-phone{
-  margin-right: 1vw;
-}
-
-/*電話番号にhover 下線*/
-.tell-number a:hover{
-  color: #bbb5af;
-  opacity: 0.8;
-  position: relative;
-  transition-property:all;     
-  transition-duration:1s; 
-}
-
-.tell-number a::after {
-  position: absolute;
-  bottom: -.5vh;/*テキストからの距離*/
-  left: 1.6vw;
-  content: '';
-  width: 95%;
-  height: 2px;/*下線の高さ*/
-  background: #bbb5af;/*下線の色*/
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform .8s;/*アニメーション速度*/
-}
-
-.tell-number a:hover::after {
-  transform: scale(1, 1);
-}
-
-
-/*電話番号下の説明*/
-.flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.1em;
-  margin-top: 1.5vh;
-}
-
-.flex p{
-  width: 15%;
-  text-align: center;
-}
-
-.time span{
-  background-color: #d5aaaa;
-  color: whitesmoke;
-  padding: 1vh 1vw;
-}
-
-.date span{
-  background-color: #d5aaaa;
-  color: whitesmoke;
-  padding: 1vh 1.6vw;
-}
-
-.time2 span{
-  padding: 1vh 1vw;
-  color: #9e9790;
-}
 
 @media screen and (max-width:1024px){
 
-    /*メイン*/
-  main{
-    max-width: 98%;
-    height: auto;
-  }
-
-  h2{
-    width: 40vw;
-    font-size: 1rem;
-  }
-
   /*form全体*/
   #form {
-    width: 98vw;
+    width: 100vw;
   }
 
   /*input*/
   input {
     font-size: 0.8em;
-    width: 98vw;
+    width: 90vw;
   }
 
   /*textarea*/
   textarea {
-    width: 98vw;
-    max-width: 98vw;
+    width: 90vw;
+    max-width: 90vw;
     font-size: 0.8em;
   }
 
   /*submit送信*/
   #submit {
-    width: 98vw;
+    width: 90vw;
     font-size: .9em;
   }
 
-  /*お電話でのお問い合わせ*/
-  .tell-number{
-    font-size: 1.5em;
-  }
-
-  /*phoneのアイコン*/
-  .fa-phone{
-    margin-right: 1.5vw;
-  }
-
-
-  /*電話番号下の説明*/
-  .flex{
-    font-size: 1em;
-  }
-
-  .flex p{
-    width: 22%;
-  }
-
-    
 }

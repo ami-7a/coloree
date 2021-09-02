@@ -4,90 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful｜PARTY1</title>
-    <link rel="stylesheet" href="css/ress.css"><!--リセットCSS-->
-    <link rel="stylesheet" href="css/common.css"><!--共通CSS-->
-    <link rel="stylesheet" href="css/commom2.css"><!--共通CSS2-->
-    <link rel="stylesheet" href="css/party1.css"><!--party1のCSS-->
+    <title>Colorful｜婚活パーティーのお知らせ</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/party1.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
-  
-    <!--google fonts-->
+
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+    
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
 
     <!--ハンバーガーメニュー-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script>
       $(function() {
-      $('.btn-gNav').on("click", function(){
+      $('.three_line_btn').on("click", function(){
     
         $(this).toggleClass('open');
-        $('#gNav').toggleClass('open');
+        $('#g_nav').toggleClass('open');
       });
     
     });
     
     // メニューをクリックされたら、非表示にする
     $(function() {
-      $('.gNav-menu li a').on("click", function(){
-         $('#gNav').removeClass('open');
+      $('.g_nav-menu li a').on("click", function(){
+        $('#g_nav').removeClass('open');
       });
     });
     </script>
-    
-    <!--font awesome コード-->
-    <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous">
-    </script>
-  
+
   </head>
-<body>
-  <header><!--全ページ共通ヘッダー-->
-    <!--会社名-->
-    <section class="company-name">
-      <img src="img/colorful.png" alt="Companylogo">
-    </section>
+  <body>
 
-    <!--グロナビ-->
-    <nav class="gnavi">
-      <div class="gnavi-inner">
-        <ul>
-          <li><a href="index.html" ><span>TOP</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span >初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </nav>
+    <header class="header">
+      <!-- ヘッダー左（ロゴ、会社名） -->
+      <section class="header-left">
+        <div class="site-logo"><img src="img/colorful-logo1.png" alt="ロゴ"></div>
+      </section>
+
+      <!-- ヘッダー右（グロナビ） -->
+      <section class="header-right">
+        <nav id="nav">
+            <li>
+              <a href="index.html"><span>TOP</span></a>
+            </li>
+
+            <li>
+              <a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a>
+            </li>
+
+            <li>
+              <a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a>
+            </li>
+
+            <li>
+              <a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a>
+            </li>
+
+            <li>
+              <a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a>
+            </li>
+
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a>
+            </li>
+
+            <li>
+              <a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
+            </li>
 
 
-    <!--全ページ共通ハンバーガーメニュー-->
+        </nav>
+      </section>
+
+      <!--共通ハンバーガーメニュー-->
     <div id="hamburger">
-      <p class="btn-gNav">
+      <p class="three_line_btn">
         <span></span>
         <span></span>
         <span></span>
       </p>
 
       <!--ハンバーガー内のグロナビ-->
-      <nav id="gNav">
-        <div class="gNav-menu">
-          <a class="gNav-img" href="index.html"><img src="img/colorful-white.png" alt=""></a>
+      <nav id="g_nav">
+        <div class="g_nav-menu">
+
+          <div class="g_nav-img"><img src="img/colorful-white-logo.png" alt=""></div>
+
           <ul>
             <li><a href="index.html"><span>トップページ</span></a></li>
+
             <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
+
             <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
+
             <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
+
             <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
+
             <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
+
           </ul>
 
           <!--無料相談はこちらボタン-->
-          <div class="contactbtn"><a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a></div>
+          <div class="contactbtn">
+            <a href="contact.html" target="_blank" rel="noopener">
+              <span>＞ 無料相談はこちら</span>
+            </a>
+          </div>
         </div>
 
         <!--ハンバーガー内SNSセクション-->
@@ -111,82 +145,39 @@
       </nav>
     </div>
 
-  </header>
 
-  <main class="main">
-    <!--CSS共通セクションタイトル-->
-    <section class="sectiontitle">
-      <h1>Matchmaking party！</h1>
-      <p>-婚活パーティーを開催いたしました-</p>
-    </section>
 
-    <!--CSS共通メインイメージ-->
-    <section class="mainimg">
-      <img src="party1.img/party.png" alt="party">
-    </section>
+    </header>
 
-    <section class="contents">
+    <main class="main">
       
+    </main>
 
-      <div class="flex">
-        <div class="mini-img">
-          <img src="party1.img/party-paper.png" alt="party">
+    <footer>
+      <section class="footer">
+        
+        <div class="footer-left">
+          <li>
+            <img src="img/colorful-white-logo.png" alt="サイトロゴ">
+          </li>
         </div>
-        <div class="flex-txt">
-          <h3>婚活パーティー</h3>
-          <p class="long-txt">恋活パーティを開催いたしました。結婚相談所へのご入会を目的ではなく、まずは結婚相談所を知っていただき、
-            なおかつ出会いを楽しんでいただくために企画いたしました。 <br>
-            
-            たくさんのご参加・お申込みをいただき、大変盛り上がりました。<br>
-            
-            今回人数の関係でお断り申し上げました方々には大変申し訳なく思っております。<br>
-            
-            次回のイベントはぜひともご参加くださいませ。</p>
 
+        <div class="footer-right">
+          <li>
+            <p>カラフル福岡結婚相談所</p>
+            <p>810-0024<br>福岡県福岡市中央区桜坂<br>
+              <a href="#" target="_blank" rel="noopener noreferrer" >[google map]</a></p>
+            <p><a href="tel:092-753-6668" target="_blank" rel="noopener noreferrer" >tel:092-753-6668</a></p>
+          </li>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <section class="copy-right">
+        <p>©︎ 2021, Colorful inc, All Rights Reserved. 
+        </p>
+      </section>
 
-  <!--全ページ共通フッター-->
-  <footer id="footer">
+    </footer>
 
-    <!--会社情報-->
-    <div class="info">
-      <!--左-->
-      <div class="info-left">
-        <p>カラフル福岡<br>結婚相談所</p>
-      </div>
-
-      <!--真ん中-->
-      <div class="info-center">
-        <p class="adress">〒810-0024<br>福岡県福岡市中央区桜坂</p>
-        <a class="tell" href="tel:092-753-6668">電話：０９２-７５３-６６６８</a> 
-        <p class="jobhour">受付時間：１０:００~１７:００</p>
-        <p class="jobdays">定休日：不定休</p>
-        <p class="car-lot">パーキング：近くにあり</p>
-      </div>
-
-      <!--右 グロナビ-->
-      <div class="info-right">
-        <ul class="info-nav">
-          <li><a href="index.html"><span>トップページ</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-        </ul>   
-        <ul class="info-nav2"> 
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </div>
-    <!--コピーライト-->
-    <p class="copy-right">©︎2021 colorful all rights reserved.</p>
-  </footer>
-  
-  
-</body>
+  </body>
 </html>

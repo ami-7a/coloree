@@ -1,136 +1,127 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorful｜福岡の結婚相談所</title>
-  <link rel="stylesheet" href="css/ress.css"><!--リセットCSS-->
-  <link rel="stylesheet" href="css/style.css"><!--メイン画面のCSS-->
-  <link rel="stylesheet" href="css/common.css"><!--共通CSS-->
-  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-  <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful｜福岡の結婚相談所</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
 
-  
-
-  <!--google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-
-  <!--JQのコード-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!--スクロールでlogoを画面top固定-->
-  <script type="text/javascript">
-    $(function(){
-      $(window).scroll(function(){
-        var obj = $('.company-name');
-        scroll = $(window).scrollTop();
-        if (scroll > 1) {
-          obj.addClass('isSmall');
-        } else{
-          obj.removeClass('isSmall');
-        }
-      })
-    });
-  </script>
-  
-  <!--スクロールでカラフル福岡結婚相談所をフェードアウト-->
-  <script>
-    var startPos = 0,winScrollTop = 0;
-    $(window).on('scroll',function(){
-      winScrollTop = $(this).scrollTop();
-      if (winScrollTop >= startPos) {
-        if(winScrollTop >= 2){
-          $('#colorfulname').addClass('hide');
-        }
-      } else if(winScrollTop = 5){
-        $('#colorfulname').removeClass('hide');
-      }
-      startPos = winScrollTop;
-    });
-  </script>
-
-  <!--font awesome コード-->
-  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
-
-  <!--ハンバーガーメニュー-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $(function() {
-    $('.btn-gNav').on("click", function(){
-  
-      $(this).toggleClass('open');
-      $('#gNav').toggleClass('open');
-    });
-  
-  });
-  
-  // メニューをクリックされたら、非表示にする
-  $(function() {
-    $('.gNav-menu li a').on("click", function(){
-       $('#gNav').removeClass('open');
-    });
-  });
-  </script>
-
-
-  <!--文字扇形配置JS,JQ-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
-  <script src="./js/jquery.arctext.js" type="text/javascript"></script>
-
-  
-</head>
-<body>
-  <!--ヘッダー-->
-  <header class="header">
-
-    <!--会社名-->
-    <div class="company-name">
-      <div id="logo">
-        <img src="img/colorful.png" alt="">
-      </div>
-    </div>
-
-    <!--グロナビ-->
-    <nav class="gnavi">
-      <div class="gnavi-inner">
-        <ul>
-          <li><a href="index.html"><span>TOP</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
     
-    <!--全ページ共通ハンバーガーメニュー-->
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
+
+    <!--ハンバーガーメニュー-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(function() {
+      $('.three_line_btn').on("click", function(){
+    
+        $(this).toggleClass('open');
+        $('#g_nav').toggleClass('open');
+      });
+    
+    });
+    
+    // メニューをクリックされたら、非表示にする
+    $(function() {
+      $('.g_nav-menu li a').on("click", function(){
+        $('#g_nav').removeClass('open');
+      });
+    });
+    </script>
+
+  </head>
+  <body>
+
+    <header class="header">
+      <!-- ヘッダー左（ロゴ、会社名） -->
+      <section class="header-left">
+        <div class="site-logo"><img src="img/colorful-logo1.png" alt="ロゴ"></div>
+      </section>
+
+      <!-- ヘッダー右（グロナビ） -->
+      <section class="header-right">
+        <nav id="nav">
+            <li>
+              <a href="index.html"><span>TOP</span></a>
+            </li>
+
+            <li>
+              <a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a>
+            </li>
+
+            <li>
+              <a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a>
+            </li>
+
+            <li>
+              <a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a>
+            </li>
+
+            <li>
+              <a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a>
+            </li>
+
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a>
+            </li>
+
+            <li>
+              <a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
+            </li>
+
+
+        </nav>
+      </section>
+
+      <!--共通ハンバーガーメニュー-->
     <div id="hamburger">
-      <p class="btn-gNav">
+      <p class="three_line_btn">
         <span></span>
         <span></span>
         <span></span>
       </p>
 
       <!--ハンバーガー内のグロナビ-->
-      <nav id="gNav">
-        <div class="gNav-menu">
-          <a class="gNav-img" href="index.html"><img src="img/colorful-white.png" alt=""></a>
+      <nav id="g_nav">
+        <div class="g_nav-menu">
+
+          <div class="g_nav-img"><img src="img/colorful-white-logo.png" alt=""></div>
+
           <ul>
             <li><a href="index.html"><span>トップページ</span></a></li>
+
             <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
+
             <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
+
             <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
+
             <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
+
             <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
+
           </ul>
 
           <!--無料相談はこちらボタン-->
-          <div class="contactbtn"><a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a></div>
+          <div class="contactbtn">
+            <a href="contact.html" target="_blank" rel="noopener">
+              <span>＞ 無料相談はこちら</span>
+            </a>
+          </div>
         </div>
 
         <!--ハンバーガー内SNSセクション-->
@@ -154,246 +145,225 @@
       </nav>
     </div>
 
-    <!--メインビジュアル-->
-    <div class="mainvisual">
-      <img src="img/table.png" alt="">
-      <p id="colorfulname">カラフル福岡結婚相談所</p>
-    </div>
-  </header>
 
-  <!--メイン-->
-  <main class="main">
-    <!--メッセージセクション-->
-    <section class="message">
-      <ul class="message-flex">
 
-       <!--写真-->
-       <li class="ringimg">
-        <img src="img/rings.jpg" alt="WeddingRing">
-       </li>
+    </header>
 
-      <!--メッセージ-->
-       <li class="message-content">
-        <h1 class="section-title">Message</h1>
-        <p class="small-title">-メッセージ-</p>
-        <p class="ceo-comment">
-          素敵な出会いを探している方、出会いがないからと諦めている方・・・<br>
-          そっと背中を押してあげられる場所として、私共の結婚相談所をご利用いただきたいと考えております。<br>
-          
-          一歩踏み出すことで、自分を知るチャンスを提供できます。<br>
-          
-          スキルアップ講座やイベントを体験して心豊かな生活、笑顔で日々を送ってほしいです。<br>
-          
-          どんな経験も、お手伝いさせていただきます。<br>
+    <main class="main">
+      <!--メインビジュアル-->
+      <section class="mainvisual">
+        <img src="img/table.png" alt="">
+      </section>
 
-          あなたの心をColorfulにするために！</p>
-        <p class="ceo-name">Colorful Fukuoka CEO :  久保 美香 ( Kubo Mika )</p>
-       </li>
-      </ul>
+      <!--メッセージセクション-->
+      <section class="message">
 
-    </section>
-
-    <!--ニュースリストセクション-->
-    <section class="news">
-      <h1 class="section-title">News</h1>
-      <p class="small-title">-ニュース-</p>
-      <!--ニュース追加-->
-      <ul class="newslist">
-        <li class="newslist-item">
-          <a href="homepage1.html" target="_blank" rel="noopener">
-            <div class="newslist-date">
-              <time datetime="2021-07-01">2021.07.01</time>
-              <p class="news-item">お知らせ</p>
-            </div>
-            <p>ホームページをリニューアルいたしました。</p>
-            <a href="homepage1.html" target="_blank" rel="noopener"><span class="arrow"></span></a>
-          </a>
+        <!--リングイメージ-->
+        <li class="ring-img">
+          <img src="img/rings.jpg" alt="WeddingRing">
         </li>
-      
-      <!--ニュース追加-->
-        <li class="newslist-item">
-          <a href="party1.html">
-            <div class="newslist-date">
-              <time datetime="2020-11-14">2020.11.14</time>
-              <p class="news-item">イベント</p>
-            </div>
-            <p>恋活パーティーを開催しました。</p>
-            <a href="party1.html"><span class="arrow"></span></a>
-          </a>
+
+        <!--メッセージ-->
+        <li class="message-txt">
+          <h1 class="section-title">Message</h1>
+          <p class="small-title">-メッセージ-</p>
+          <p class="ceo-txt">
+            素敵な出会いを探している方、出会いがないからと諦めている方・・・<br>
+            そっと背中を押してあげられる場所として、私共の結婚相談所をご利用いただきたいと考えております。<br>
+            スキルアップ講座やイベントを体験し、心豊かな生活、笑顔で日々を送ってほしいです。<br>
+            どんな経験も、お手伝いさせていただきます。<br>
+            あなたの心をColorfulにするために。
+          </p>
+          <p class="ceo-name">
+            Mika Kubo
+          </p>
         </li>
-      </ul>
-    </section>
+      </section>
 
-    <!--コースセクション-->
-    <section class="course">
-      <h1 class="section-title">Course</h1>
-      <p class="small-title">-コース-</p>
-      <div class="four-courses">
-        <!--上段左 スタンダードコース-->
-        <div class="standard flex">
-          <ul class="course-item">
-            <li><img src="img/course1.png" alt="standard course"></li>
-            <li>
-              <h2 class="course-title">
-                <a href="plan.html" target="_blank" rel="noopener"><span class="text-btn">スタンダードコース</span></a>
-              </h2>
-              <p class="course-text">人気No.1コース！<br>
-              ご自身でのお相手探しに加え、
-              プロからの紹介も受けることも可能。
-              フォロー面談・電話・メールサポート付き。
-              <a href="plan.html" target="_blank" rel="noopener"><span class="arrow-2"></span></a><!--矢印２-->
-              </p>
-              
-            </li>
-          </ul>
-        </div>
-
-        <!--上段右 シンプルコース-->
-        <div class="simple flex">
-          <ul class="course-item">
-            <li><img src="img/course2.png" alt="simple course"></li>
-            <li>
-              <h2 class="course-title">
-                <a href="plan.html" target="_blank" rel="noopener" ><span class="text-btn">シンプルコース</span></a>
-              </h2>
-              <p class="course-text">入会に興味があり、
-                積極的にご自分でパートナーを探したい方に最適！
-                困った時にはサポートいたします。
-              <a href="plan.html" target="_blank" rel="noopener"><span class="arrow-2"></span></a><!--矢印２--></p>
-            </li>
-          </ul>
-        </div>
-
-        <!--下段左 プレミアコース-->
-        <div class="premier flex">
-          <ul class="course-item">
-            <li><img src="img/course3.png" alt="premier course"></li>
-            <li>
-              <h2 class="course-title">
-                <a href="plan.html" target="_blank" rel="noopener"><span class="text-btn">プレミアコース</span></a>
-              </h2>
-              <p class="course-text">お見合いまでの心構えや身支度のサポートを。
-                プロのスタイリストによる 
-                ファッションアドバイスなど
-                サポートがたくさんついております。
-              <a href="plan.html" target="_blank" rel="noopener"><span class="arrow-2"></span></a><!--矢印２--></p>
-            </li>
-          </ul>
-        </div>
-
-        <!--下段右 ご相談コース-->
-        <div class="counseling flex">
-          <ul class="course-item">
-            <li><img src="img/course4.png" alt="counseling course"></li>
-            <li>
-              <h2 class="course-title">
-                <a href="contact.html" target="_blank" rel="noopener"><span class="text-btn">婚活のご相談［無料］</span></a>
-              </h2>
-              <p class="course-text">まずはカウンセラーの話を聞いてみたい、
-                お話をしてみたい方にお勧め。
-                無理な勧誘は一切いたしませんので、
-                まずはお気軽にご相談ください。
-              <a href="contact.html" target="_blank" rel="noopener"><span class="arrow-2"></span></a><!--矢印２--></p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!--会社概要セクション-->
-    <section class="aboutus">
-      <div class="aboutus-content">
-        <!--会社概要-->
-        <a href="#" target="_blank" rel="noopener" class="aboutus-list">
-          <div class="aboutus-img">
-            <img src="img/aboutus.png" alt="About us">
-            <div class="text">
-              <h3 class="aboutus-title">About us</h3>
-              <p class="aboutus-jatitle">会社概要</p>
-            </div>
-          </div>
-        </a>
-
-        <!-- コンタクト-->
-        <a href="contact.html" target="_blank" rel="noopener" class="aboutus-list">
-          <div class="contact-img">
-            <img src="img/contact.png" alt="">
-            <div class="text">
-              <h3 class="aboutus-title">Contact</h3>
-              <p class="aboutus-jatitle">コンタクト</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="arch-txt">
-      <!--アーチ型文字-->
-      <p id="contactus">CONTACT US</p>
-      <script type="text/javascript">
-        $('#contactus').arctext({radius: 200});
-      </script>
-    </section>
-
-    <!--SNSセクション-->
-    <section class="sns">
-      <!--SNSリンク-->
-      <ul class="sns-flex">
-        <!--電話-->
-          <li><a href="tel:092-753-6668"><i class="fas fa-phone fa-2x"></i></a></li>
-
-          <!--インスタグラム-->
-          <li><a href="https://www.instagram.com/colorful0122/" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a></li>
-
-          <!--LINE-->
-          <li><a href="https://lin.ee/oYkXzqj" target="_blank" rel="noopener"><i class="fab fa-line fa-2x"></i></a></li>
+      <!--ニュースセクション-->
+      <section class="news">
+        <h1 class="section-title">News</h1>
+        <p class="small-title">-ニュース-</p>
+        <!--ニュース追加-->
+        <ul class="newslist">
+          <li class="newslist-item">
+            <a href="homepage1.html" target="_blank" rel="noopener">
+              <div class="newslist-date">
+                <time datetime="2021-07-01">2021.07.01</time>
+                <p class="news-item">お知らせ</p>
+              </div>
+              <p>ホームページをリニューアルいたしました。</p>
+              <a href="homepage1.html" target="_blank" rel="noopener"><span class="arrow"></span></a>
+            </a>
+          </li>
+        
+        <!--ニュース追加-->
+          <li class="newslist-item">
+            <a href="party1.html">
+              <div class="newslist-date">
+                <time datetime="2020-11-14">2020.11.14</time>
+                <p class="news-item">イベント</p>
+              </div>
+              <p>恋活パーティーを開催しました。</p>
+              <a href="party1.html"><span class="arrow"></span></a>
+            </a>
+          </li>
         </ul>
-    </section>
-  </main>
-  
+      </section>
 
-<!--フッター-->
-<footer id="footer">
+      <!--コースセクション-->
+      <section class="course">
+        <h1 class="section-title">Course</h1>
+        <p class="small-title">-コース-</p>
 
-  <!--会社情報-->
-  <div class="info">
-    <!--左-->
-    <div class="info-left">
-      <p>カラフル福岡<br>結婚相談所</p>
-    </div>
+          <div class="four-courses">
 
-    <!--真ん中-->
-    <div class="info-center">
-      <p class="adress">〒810-0024<br>福岡県福岡市中央区桜坂</p>
-      <a class="tell" href="tel:092-753-6668">電話：０９２-７５３-６６６８</a> 
-      <p class="jobhour">受付：１０:００~１７:００</p>
-      <p class="jobdays">定休日：不定休</p>
-      <p class="car-lot">パーキング：近くにあり</p>
-    </div>
+            <!--左１ スタンダードコース-->
+            <a class="standard flex" href="plan.html" target="_blank" rel="noopener">
 
-    <!--右 グロナビ-->
-    <div class="info-right">
-      <ul class="info-nav">
-        <li><a href="index.html"><span>トップページ</span></a></li>
-        <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-        <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-        <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-      </ul>   
-      <ul class="info-nav2"> 
-        <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-        <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
-        <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        <li class="freecontact"><a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a></li>
-      </ul>
+                <li class="up-course">
+                  <img src="img/course1.png" alt="standard course">
+                </li>
 
+                <li class="down-course">
+                  <h2>スタンダードコース</h2>
+                  <p>人気No.1コース！<br>
+                  ご自身でのお相手探しに加え、プロからの紹介が可能。<br>フォロー面談・電話・メールサポート付き。
+                  </p>
+                  
+                </li>
 
-    </div>
+              </a>
+
+            <!--左２ シンプルコース-->
+            <a class="simple flex" href="plan.html" target="_blank" rel="noopener">
+
+                <li class="up-course">
+                  <img src="img/course2.png" alt="standard course">
+                </li>
+
+                <li class="down-course">
+                  <h2>シンプルコース</h2>
+                  <p>入会に興味があり、積極的にご自分でパートナーを探したい方に最適です。<br>困った時にはサポートいたします。
+                  </p>
+                </li>
+
+            </a>
+
+            
+            <!--左３ プレミアコース-->
+            <a class="premier flex" href="plan.html" target="_blank" rel="noopener">
+
+                <li class="up-course">
+                  <img src="img/course3.png" alt="premier course">
+                </li>
+
+                <li class="down-course">
+                  <h2>プレミアコース</h2>
+                  <p>お見合いまでの心構えや身支度のサポートを。<br>プロのスタイリストによるファッションアドバイスなどサポートがたくさんついております。
+                  </p>
+                </li>
+          
+            </a>
+
+            <!--左４ ご相談コース-->
+            <a class="counseling flex" href="plan.html" target="_blank" rel="noopener">
+
+            
+                <li class="up-course">
+                  <img src="img/course4.png" alt="counseling course">
+                </li>
+                
+                <li class="down-course">
+                  <h2>婚活のご相談［無料］</h2>
+                  <p>まずはカウンセラーの話を聞いてみたい、お話をしてみたい方におすすめ。<br>無理な勧誘は一切いたしませんので、まずはお気軽にご相談ください。
+                  </p>
+                </li>
+            </a>
+          </div>
+
+          <div class="read-more-contact-btn">
+            <a href="plan.html" target="_blank" rel="noopener">Read More</a>
+          </div>
     
-    
-  </div>
-  <!--コピーライト-->
-  <p class="copy-right">©︎2021 colorful all rights reserved.</p>
-</footer>
+
+      </section>
+
+        <!--会社概要セクション-->
+      <section class="company">
+
+          <!-- 流動する丸 -->
+          <div class="fluid"></div>
+
+        <!--メッセージ-->
+          <h1 class="section-title">Company</h1>
+          <p class="small-title">-会社概要-</p>
+          
+          <p class="company-txt">カラフル福岡結婚相談所</p>
+          <p class="company-txt">〒810-0024 福岡県福岡市中央区桜坂<br>
+            <a href="#" target="_blank" rel="noopener noreferrer" >[google map]</a>
+          </p>
+          <p class="company-txt tel"><a href="tel:092-753-6668" target="_blank" rel="noopener noreferrer" >tel:092-753-6668</a></p>
+          
+          <div class="read-more-contact-btn">
+            <a href="#" target="_blank" rel="noopener">Read More</a>
+          </div>
+
+          <p class="company-txt"></p>
+          <p class="company-txt"></p>
+
+      </section>
+
+      <!-- SNSセクション -->
+      <section class="sns">
+        <h1 class="section-title">Contact</h1>
+        <p class="small-title">-お問い合わせ-</p>
+
+        <ul class="sns-content">
+            <li class="line">
+              <a class="sns-btn" href="https://lin.ee/oYkXzqj" target="_blank" rel="noopener" ><i class="fab fa-line"></i></a>
+              <p>Official LINE</p>
+            </li>
+      
+            <li class="instagram">
+              <a class="sns-btn" href="https://www.instagram.com/colorful0122/" target="_blank" rel="noopener" ><i class="fab fa-instagram"></i></a>
+              <p>Follow Us</p>
+            </li>
+      
+            <li class="email">
+              <a class="sns-btn" href="contact.html" target="_blank" rel="noopener" ><i class="far fa-envelope"></i></a>
+              <p>Sent an Email</p>
+            </li>
+          </ul>
+      </section>
   
-</body>
+    </main>
+
+    <footer>
+      <section class="footer">
+        
+        <div class="footer-left">
+          <li>
+            <img src="img/colorful-white-logo.png" alt="サイトロゴ">
+          </li>
+        </div>
+
+        <div class="footer-right">
+          <li>
+            <p>カラフル福岡結婚相談所</p>
+            <p>810-0024<br>福岡県福岡市中央区桜坂<br>
+              <a href="#" target="_blank" rel="noopener noreferrer" >[google map]</a></p>
+            <p><a href="tel:092-753-6668" target="_blank" rel="noopener noreferrer" >tel:092-753-6668</a></p>
+          </li>
+        </div>
+      </section>
+
+      <section class="copy-right">
+        <p>©︎ 2021, Colorful inc, All Rights Reserved. 
+        </p>
+      </section>
+
+    </footer>
+
+  </body>
 </html>

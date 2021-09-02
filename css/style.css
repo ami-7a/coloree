@@ -1,515 +1,71 @@
-/*メインサイトのCSS*/
+/* トップページ メインビジュアルから */
 
-/*ヘッダー*/
-header{
-  padding-top: 5vh;
-  height: 100vh;
-  position: relative;
+/*メインビジュアル*/
+.mainvisual{
+  height: auto;
 }
 
-/*カラフルロゴ*/ 
-.company-name {
-  position: fixed;
-  top: 1vh;
-  left: 1vw;
-  margin-top: -14.5vh;/*画面トップに固定*/
-  z-index: 100;
-  transition: all .8s;/*アニメーション設定*/
-  max-width: 18vw;
-}
-
-/*小さくなった時のlogoサイズ*/
-.company-name.isSmall{
-  max-width: 10vw!important;
-}
-
-.company-name img{
-  width: 26vw;
-  height: 42vh;
-  object-fit: contain;
-}
-
-/*グロナビ*/
-.gnavi{
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  padding-top: 5vh;
-  padding-right: 2vw;
-  width: 100vw;
-  height: 12vh;
-  background-color: #fef9f2;
-}
-
-.gnavi-inner{
-  width: 55vw;
-  float: right;
-}
-
-.gnavi ul{
-  display: flex;
-  margin: 0 -1vw;
-}
-
-.gnavi li{
-  flex: 1 1;
-  position: relative;
-  display: flex;
-}
-
-.gnavi a{
-  display: flex;
-  flex: 1 1;
-  justify-content: center;
-  padding: 0 1.5vw;
-}
-
-.gnavi li::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 20px;
-  background-color: #3c4148;
-  position: absolute;
-  right: 1px;
-  top: calc((100% - 20px)/2);
-}
-
-.gnavi li:last-child::after {
-  content: none;
-}
-
-.gnavi span{
-  font-weight: bold;
-  font-size: 0.85em;
-  display: flex;
-  align-items: center;
-  word-break: keep-all;
-}
-
-/*グロナビにhover 左から下線*/
-.gnavi a:hover span{
-  color: #9d9087;
-  opacity: 0.8;
-  position: relative;
-  transition-property:all;     
-  transition-duration:1s; 
-}
-
-.gnavi-inner a::after {
-  position: absolute;
-  bottom: -.5vh;/*テキストからの距離*/
-  left: 1.6vw;
-  content: '';
-  width: 60%;
-  height: 2px;/*下線の高さ*/
-  background: #9d9087;/*下線の色*/
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform .5s;/*アニメーション速度*/
-}
-
-.gnavi-inner a:hover::after {
-  transform: scale(1, 1);
-}
-
-/*メイン写真*/
 .mainvisual img{
-  padding-top: 2vh;
   float: right;
-  width: 83vw;
-  height: 88vh;
+  width: 94vw;
+  height: 91vh;
   object-fit: cover;
-}
-
-/*カラフル福岡結婚相談所*/
-#colorfulname{
-  position: fixed;
-  writing-mode: vertical-rl;
-  letter-spacing: .5vw;
-  margin-left: 6.1vw;
-  margin-top: 5vh;
-  padding-top: 2vh;
-  z-index: 1;
-  transition: all 5s;
-}
-
-#colorfulname.hide{
-  transform: translateY(-400vh);
-}
-
-/*スマホ用ハンバーガーメニュー*/
-#hamburger {
-  display : block;
-  position: fixed;
-  z-index : 2;
-  right : 6vw;
-  top   : 4vh;
-  width : 42px;
-  height: 42px;
-  cursor: pointer;
-  text-align: center;
-}
-
-#hamburger .btn-gNav span{
-  position: absolute;
-  width: 7vw;
-  height: 2px;
-  background: #9d9087;
-  border-radius: 10px;
-  -webkit-transition: 1s ease-in-out;
-  -moz-transition   : 1s ease-in-out;
-  transition        : 1s ease-in-out;
-}
-
-/*ハンバーガーのライン調整*/
-#hamburger .btn-gNav span:nth-child(1) {
-  top:0vh;
-}
-#hamburger .btn-gNav span:nth-child(2) {
-  top:2vh;
-}
-#hamburger .btn-gNav span:nth-child(3) {
-  top:4vh;
-}
-
-/*ハンバーガークリック時 ラインがばつ印に*/
-#hamburger .btn-gNav.open span:nth-child(1){
-  background: #fff;
-  top: 2vh;
-  -webkit-transform: rotate(-315deg);
-  -moz-transform   : rotate(-315deg);
-  transform        : rotate(-315deg);
-  z-index: 3;
-  transition: 1s;
-}
-
-#hamburger .btn-gNav.open span:nth-child(2),#hamburger .btn-gNav.open span:nth-child(3){
-  top: 2vh;
-  background :#fff;
-  -webkit-transform: rotate(315deg);
-  -moz-transform   : rotate(315deg);
-  transform        : rotate(315deg);
-  z-index: 3;
-  transition: 1s;
-}
-
-/*ハンバーガーメニュークリック時のグロナビ*/
-#gNav{
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100vw;
-  height: 100vh;
-  background: #9d9087;
-  opacity: 100;
-  font-size: 16px;
-  text-align: center;
-  box-sizing: border-box;
-  z-index: 2;
-  transition: all 0.6s;
-}
-
-.gNav-img img{
-  width: 30vw;
-  height: 30vh;
-  margin-bottom: -50px;
-  object-fit: contain;
-}
-
-#gNav.open{
-  right: 0px;
-}
-
-#gNav .gNav-menu ul{
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center;
-}
-
-/*ハンバーガー内 グロナビhover下線*/
-#gNav .gNav-menu li{
-  display: block;
-  padding : 4vh;
-  width: 50%;
-  margin: 0 auto;
-}
-
-#gNav .gNav-menu li a{
-  color: #fafafa;
-  position: relative;
-}
-
-#gNav .gNav-menu a::before{
-  content: "";
-	position: absolute;
-	left: 0;
-	bottom: -4px;
-	width: 100%;
-	height: 1px;
-	background: #fefefe;
-	transform: scale(0, 1);
-	transition: .5s;
-}
-
-#gNav .gNav-menu a:hover::before{
-  transform: scale(1);
-}
-
-
-/*無料相談はこちらボタン*/
-.contactbtn a{
-  background-color: #9d9087;
-  border: 1px solid #ddd;
-  padding: 1vh 2vw;
-  margin: 10vh auto 5vh;
-  border-radius: 10px;
-}
-
-.contactbtn a span{
-  font-size: 1rem;
-}
-
-.contactbtn span{
-  color: #fefefe;
-}
-
-.contactbtn a:hover span{
-  color: #9d9087;
-}
-
-.contactbtn a:hover{
-  background-color: #fefefe;
-  padding: 1vh 1.5vw;
-  border-radius: 10px;
-}
-
-/*ハンバーガー内 SNSボタン*/
-.sns-icons{ 
-  width: 100%;
-}
-
-.sns-icons ul{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.sns-icons li i{
-  color: #fafafa;
-  margin-right: 20px;
-}
-
-.sns-icons li i {
-  display: block;
-  margin-top: 4vh;
-  margin-right: 4vw;
-}
-
-.sns-icons a:hover{
-  font-size: 1.5rem;
-  transition: 1s;
-}
-
-/*@media ヘッダーの分*/
-@media screen and (min-width: 1024px){
-  .btn-gNav{
-    display: none;
-  }
-
-}
-
-@media screen and (max-width: 1024px){
-  header{
-    height: auto;
-  }
-
-  .gnavi{
-    display: none;
-  }
-
-  body{
-    width: 98vw;
-    margin: 0 auto;
-  }
-
-  .company-name {
-    position: fixed;
-    top: 0vh;
-    left: 2vw;
-    margin-top: -15vh;/*画面トップに固定*/
-    z-index: 1;
-    transition: all .8s;/*アニメーション設定*/
-    max-width: 20vw;
-  }
-
-  .company-name.isSmall{
-    max-width: 20vw!important;
-  }
-
-    /*メイン写真*/
-  .mainvisual img{
-    padding-top: 2.5vh;
-    float: none;
-    margin: 0 auto;
-    width: 95vw;
-    height: 50vh;
-    object-fit: cover;
-  }
-
-  /*カラフル福岡結婚相談所*/
-  #colorfulname{
-    position: fixed;
-    writing-mode: horizontal-tb;
-    font-size: .8em;
-    letter-spacing: .5vw;
-    top: -1.5vh;
-    left: 17vw;
-    z-index: 1;
-    transition: all 5s;
-  }
-  
-  #colorfulname.hide{
-    transform: translateY(-400vh);
-  }
-  
-}
-
-
-/*メイン*/
-.main{
-  height: 335vh;
-  max-width: 74vw;
-  margin: 0 auto;
-  margin-top: 10vh;
 }
 
 /*メッセージセクション*/
-.message-flex{
+.message{
+  width: 100vw;
+  height: auto;
   display: flex;
+  padding-top: 20vh;
 }
 
-.message-flex li{
-  width: 50vw;
+.message li{
+  width: 50%;
 }
 
-/*リング写真*/
-.message-flex li img{
-  width: 60vw;
-  height: 64vh;
+/* リングイメージ */
+.ring-img img{
+  width: 35vw;
+  height: 60vh;
   object-fit: cover;
+  margin-left: 5vw;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
 
 /*メッセージ*/
-.message-content{
-  margin-top: 3vh;
-  margin-left: 6vw;
-  line-height: 5.2vh;
-}
-
-.section-title{ /*section-title共通*/
-  letter-spacing: .2vw;
-  font-size: 3rem;
-  font-weight: normal;
-}
-
-.small-title{/*small-title共通*/
-  font-size: 0.8rem;
-  margin-left: .3vw;
+.message .message-txt{
+  width: 40%;
+  margin: 2vh 0vw 0vh 1vw;
+  line-height: 5.5vh;
 }
 
 .ceo-name{
   margin-top: 4vh;
-  letter-spacing: .1vw;
+  font-family: 'WindSong', cursive;
+  font-size: 2rem;
 }
 
-/*@media メイン（メッセージの分）*/
-@media screen and (max-width: 1024px){
-  /*メイン*/
-  .main{
-    height: auto;
-    max-width: 98vw;
-    margin: 0 auto;
-    margin-top: 8vh;
-  }
-
-  /*メッセージセクション*/
-  .message-flex{
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .message-flex li{
-    width: 90vw;
-  }
-
-  /*メッセージ*/
-  .message-content{
-    margin-top: 1vh;
-    margin: 1% auto;
-    line-height: 5vh;
-    font-size: .9em;
-    text-align: center;
-  }
-
-  .section-title{ 
-    font-size: 1.7rem;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .small-title{
-    text-align: center;
-    font-size: 0.8rem;
-    margin-right: 1vw;
-  }
-  
-  .ceo-comment{
-    margin-top: 2vh;
-  }
-
-  .ceo-name{
-    font-size: .9em;
-    margin-bottom: 2vh;
-  }
-
-  .ringimg{
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  /*リング写真*/
-  .message-flex li img{
-    width: 100vw;
-    height: 45vh;
-    object-fit: cover;
-  }
-}
-
-
-/*ニュースリスト*/
+/*ニュースセクション*/
 .news{
-  margin-top: 15vh;
-  height: 50vh;
+  height: auto;
+  margin-top: 30vh;
 }
 
 .newslist{
-  padding-top: 2.5vh;
-  border-bottom: 1px solid #ded5d0;
-  /*ニュースリストスクロールした時*/
-  max-height: 40vh;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3vh;
+  border-bottom: 1px solid #5555558e;
+  /*ニューススクロールした時*/
+  max-height: 35vh;
   overflow-y: auto;
   margin-bottom: 10vh;
 }
 
 .newslist-item {
-  padding: 3.5vh 0vw;
-  border-top: 1px solid #ded5d0;
+  padding: 3vh 3vw;
+  border-top: 1px solid #5555558e;
 }
 
 .newslist-item a {
@@ -522,11 +78,13 @@ header{
   margin-right: 5vw;
 }
 
-.news-item { /*お知らせかイベント*/
-  background: #ffe0a0;
-  border-radius: 14px;
-  width: 6em;
-  /* 親要素の文字サイズを基準 */
+/*お知らせかイベント*/
+.news-item { 
+  background: #e4bfbf;
+  border-radius: 5px;
+  /* オレンジ部分の幅と高さ */
+  width: 7vw;
+  height: 3vh;
   text-align: center;
   margin-left: 2vw;
 }
@@ -535,528 +93,385 @@ header{
 .arrow {
   width: 2vw;
   height: .1vh;
-  background: #9d9087;
-  position: absolute;
-  top: 50%;
+  background: #555555;
   right: 0;
+  position: absolute;
 }
 
 .arrow::after {
   content: "";
-  display: block;
   width: .5vw;
   height: .1vh;
-  background: #9d9087;
+  background: #555555;
+  display: block;
   transform: rotate(45deg);
-  position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 2px;
-}
-
-/*@media メイン（ニュースの分）*/
-@media screen and (max-width: 1024px){
-  /*ニュースリスト*/
-  .news{
-    width: 93vw;
-    height: auto;
-  }
-
-  .newslist{
-    padding: 3vh 2vw 0vh;
-  }
-
-  .newslist-item {
-    padding: 2.5vh 0vw;
-    font-size: .9em;
-  }
-
-  .news-item { /*お知らせかイベント*/
-    width: 5em;
-  }
-
-  /*arrow 矢印*/
-.arrow {
-  width: 2.8vw;
-}
-
-.arrow::after {
-  width: .9vw;
-}
-
+  position: absolute;
 }
 
 
 /*コースセクション*/
 .course{
-  height: 105vh;
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30vh;
 }
 
 .four-courses{
-  padding-top: 7vh;
+  padding-top: 10vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.course-item li{
-  width: 45%;
+.four-courses .flex{
+  width: 22%;
+  height: 50vh;
+  /* border: 1px solid #5555558e; */
+  background-color: #fef9f2d8;
+  box-shadow: 0px 0px 8px #838383;
 }
 
-.flex{
-  height: 37vh;
-  flex: auto;
-  width: 50%;
-  /*border-bottom: 0.51px solid #ded5d0;*/
+.up-course{
+  height: 55%;
 }
 
-/*各コースの写真*/
-.four-courses img{
-  width: 13vw;
-  height: 24vh;
+.up-course img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  margin: 20px;
+  padding: 10% ;
 }
 
-.four-courses ul{
-  display: flex;
+.down-course{
+  height: 45%;
+  padding: 0vh 2vw;
 }
 
-.course-title{
-  font-size: 1.05rem;
-  font-weight: bold;
+.down-course h2{
+  font-size: 1rem;
+  font-weight: normal;
+  padding-bottom: 2vh;
 }
 
-/*コースタイトルの下線*/
-.course-title a{
-  border-bottom: 1px dotted #ded5d0;
-  padding-bottom: .7vh;
+.down-course p{
+  font-size: .8rem;
 }
 
-/*コースタイトルの下線 hover左から下線*/
-.text-btn{
+
+/* hoverで枠線 */
+.flex {
   position: relative;
-  z-index: 1;
 }
-
-.text-btn:after{
+  
+.flex::before {
   content: '';
   position: absolute;
+  top: -2px;
   left: 0;
-  bottom: -.8vh;/*テキストからの距離*/
-  width: 0%;/*初期状態では下線非表示*/
-  height: .2vh;/*下線の高さ*/
-  background: #9d9087;/*下線の色*/
-  z-index: -1;
-  transition: all 0.9s;/*アニメーション速度*/
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
 }
-
-.course-title:hover .text-btn:after{
-  width: 100%;/*hover時に表示*/
-}
-
-/*コースの説明*/
-.course-text{
-  padding-left: .7vw;
-  font-size: 0.9em;
-  line-height: 4.5vh;
-  margin-top: 2vh;
-  position: relative; /*矢印２のrelative*/
-}
-
-/*矢印２*/
-.arrow-2 { 
-  width: 2vw;
-  height: .1vh;
-  background: #9d9087;
+  
+.flex::after {
+  content: '';
   position: absolute;
-  bottom: -2vh;
+  bottom: -2px;
   right: 0;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
 }
-
-.arrow-2::after {
-  content: "";
-  display: block;
-  width: .5vw;
-  height: .1vh;
-  background: #9d9087;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 0px;
-  bottom: 3px;
-}
-
-/*@media メイン（コースセクションの分）*/
-@media screen and (max-width: 1024px){
-
-    /*コースセクション*/
-  .course{
-    padding-top: 10vh;
-    height: auto;
-  }
-
-  .four-courses{
-    flex-direction: column;
-  }
-
-  .course-item li{
-    width: 49%;
-  }
-
-  .flex{
-    width: 98%;
-  }
 
   
-  /*各コースの写真*/
-  .four-courses img{
-    width: 35vmin;
-    height: 35vmin;
-    object-fit: cover;
-    margin:  10px;
-  }
-
-  .course-title{
-    font-size: .9rem;
-  }
-
-  /*コースの説明*/
-  .course-text{
-    padding-left: 0vw;
-    padding-right: 1vw;
-    font-size: 0.8em;
-  }
-
-  /*矢印２*/
-  .arrow-2 { 
-    width: 2.5vw;
-    height: .1vh;
-    bottom: -1.5vh;
-
-  }
-
-  .arrow-2::after {
-    width: 1vw;
-    height: .1vh;
-    bottom: 2px;
-  }
-
+.flex:hover::before {
+  width: 100%;
+  height: 101%;
+  border-top-color: #4d566b;
+  border-right-color: #4d566b;
+  transition: width .25s ease-out, height .25s ease-out .25s;
 }
 
-/*会社概要セクション*/
-.aboutus{
-  height: 55vh;
+.flex:hover::after {
+  width: 100%;
+  height: 101%;
+  border-bottom-color: #4d566b;
+  border-left-color: #4d566b;
+  transition: border-color 0s ease-out .5s, width .25s ease-out .5s, height .25s ease-out .75s;
 }
 
-/*コンテンツを横並び*/
-.aboutus-content{
-  display: flex;
-}
 
-/*画像全体のaタグ*/
-.aboutus-list{
-  width: 50%;
-  text-align: center;
-  display: block;
+
+
+/* 会社概要 */
+.company{
+  height: auto;
+  margin: 30vh auto; 
   position: relative;
-  overflow: hidden;
 }
 
-/*横並び画像２つ*/
-.aboutus-img img,
-.contact-img img{
-  height: 40vh;
-  width: 100vh;
-  object-fit: cover;
-  transition: .5s;
-  background: #000;
-}
-
-/*画像hover時の変化*/
-.aboutus-img img:hover,
-.contact-img img:hover{
-  transform: scale(1.2,1.2);
-  opacity: 0.7;
-}
-
-/*画像中テキスト*/
-.text{
+/* 流動する丸 */
+.fluid {
+  width: 80vh;/*横幅*/
+  height: 70vh;/*縦幅*/
+  background:#eec7c7a9;
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
   position: absolute;
-  top: 48%;
-  left: 50%;
-  -ms-transform: translate(-48%,-50%);
-  -webkit-transform: translate(-48%,-50%);
-  transform: translate(-48%,-50%);
-  margin:0;
-  padding:0;
-  border: solid white 1px; /*線で囲う*/
-  background-color: rgba(226, 226, 226, 0.4) ;
-  padding: 1px 40px 5px 40px;/*文字と線の間の余白*/
-  color: #6b6561;/*文字色*/
+  top: -15%;
+  right: 27%;
+  z-index: -10; /* 要素を後ろへ */
 }
 
-/*h3の共通カスタム*/
-.aboutus-list h3{
-  letter-spacing: .1vw;
-  font-size: 1.7rem;
-  font-weight: normal;
+@keyframes fluidrotate { 
+ 
+	  
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+	  
 }
 
-/*@media メイン（会社概要セクションの分）*/
-@media screen and (max-width: 1024px){
-
-    /*会社概要セクション*/
-  .aboutus{
-    margin-top: 5vh;
-    height: auto;
-  }
-
-  /*コンテンツを縦並び*/
-  .aboutus-content{
-    flex-direction: column;
-  }
-
-  /*画像全体のaタグ*/
-  .aboutus-list{
-    width: 100%;
-  }
-
-  /*画像２つ*/
-  .aboutus-img img,
-  .contact-img img{
-    height: 30vh;
-  }
-
-  /*画像中テキスト*/
-  .text{
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-  }
-
-  /*h3の共通カスタム*/
-  .aboutus-list h3{
-    font-size: 1.1rem;
-  }
-
-  .aboutus-jatitle{
-    font-size: .8rem;
-  }
-
-
+.company-txt{
+  margin: 1.5vh auto;
+  line-height: 5vh;
 }
 
-/*アーチ型文字*/
-.arch-txt{
-  height: 18vh;
-  text-align: center;
-  margin-top: 10vh;
+.tel{
+  border-bottom: 1px dotted #302c2579;
+  width: 10%;
+  margin: 0 auto;
 }
 
-#contactus{
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-#contactus span {
-  /*background-color: 	#d5aaaa; *//* 背景色 */
-  color: 	#d5aaaa;           /* 文字色 */
-  border-radius: 50px;     /* 角丸 */
-  padding: 5px 10px;  /* 内側の余白 */
-}
-
-/*SNS セクション*/
+/* SNSセクション */
 .sns{
-  height: 60vh;
-  width: 100%;
+  height: auto;
 }
 
-.sns-flex{
+.sns-content{
   display: flex;
-  justify-content: center;
-  text-align: center;
+  width: 70%;
+  margin: 10vh auto 0vh;
+  position: relative;
 }
 
-.sns-flex li a{/*３つのSNSボタン共通css*/
-  display: block;
-  margin-right: 2vw;
-  border: 1px solid #9d9087;
-  border-radius: 50%;
-  padding: 10px;
+.sns-content li{
+  width: 23%;
+  margin: 0 auto;
+  padding-left: 1vw;
 }
 
-.sns-flex li i{
-  color: #9d9087;
-}
-
-.sns li:nth-of-type(3){
-  margin-right: -2vw;
-}
-
-/*@media メイン（SNSセクションの分）*/
-@media screen and (max-width: 1024px){
-  
-    /*アーチ型文字*/
-  .arch-txt{
-    height: auto;
-    margin: 20vh auto 10vh;
+/* ボタン全体 */
+.sns-btn{
+  display:inline-block;	
+  font-size: 40px;
+  text-decoration:none;
+  transition:.5s;
+  color: #424241;	
   }
 
-  #contactus{
-    font-size: .9rem;
+  /* インスタ・ライン少し大きく */
+  .sns-btn .fa-instagram,
+  .sns-btn .fa-line{
+  font-size: 42px;
   }
 
-  /*SNS セクション*/
-  .sns{
-    height: auto;
-    padding-bottom: 10vh;
+  /* Instagramホバー時 */
+.sns-btn .fa-instagram:hover{
+  color:#c6529a;
   }
 
-  .sns-flex i{
-    font-size: 1.3rem;
-  }
-}
-
-
-/*フッター*/
-#footer{
-  height: 36vh;
-  max-width: 1000vh;
-  margin-top: 15vh;
-  border-top: 1px dotted #9d9087;
-  border-bottom: 1px dotted #9d9087;
-  padding: 2%;
-}
-
-.info{
-  display: flex;
-  width: 100%;
-}
-
-/*左*/
-.info-left{
-  margin-left: 10vw;
-  width: 25%;
-}
-
-/*真ん中*/
-.info-center{
-  width: 40%;
-  line-height: 1.5rem;
-}
-
-.info-center .adress::after{
-  content: "\A- - - - - - - - - - - - - - - - - - - - - - - ";
-  white-space: pre;
-}
-
-.info-center a:hover{
-  color: #9d9087;
-  opacity: 0.8;
-}
-
-/*右*/
-.info-right{
-  display: flex;
-  width: 35%;
-  line-height: 2rem;
-}
-
-.info-left p{
-  font-size: 1.2rem;
-}
-
-.info-right .info-nav{
-  margin-right: 5vw ;
-}
-
-/*グロナビにhover*/
-.info-nav a:hover span{
-  color: #9d9087;
-  opacity: 0.8;
-}
-
-.info-nav2 a:hover span{
-  color: #9d9087;
-  opacity: 0.8;
-}
-
-/*無料相談はこちら*/
-.info-nav2 .freecontact a{
-  margin-top: 4vh;
-  margin-left: 2vw;
-  font-size: 1rem;
-  background-color: #d5aaaa;
-  border: 1px solid #d5aaaa;
-  padding: 1vh 1vw;
-  border-radius: 20px;
-}
-
-.info-nav2 .freecontact span{
-  color: white;
-}
-
-.info-nav2 .freecontact a:hover span{
-  color: #d5aaaa;
-  
-}
-
-.info-nav2 .freecontact a:hover{
-  background-color: #fef9f2;
-  padding: 1vh 1vw;
-  border-radius: 20px;
-}
-
-/*コピーライト*/
-.copy-right{
-  text-align: right;
-  font-size: 0.7rem;
-  margin-top: 6vh;
-}
-
-/*@media メイン（フッターの分）*/
-@media screen and (max-width: 1024px){
-
-  /*footer*/
-  #footer{
-    margin: 0 auto;
-    height: auto;
-    max-width: 98vh;
-    margin-top: 10vh;
-    border-top: 1px dotted #9d9087;
-    border-bottom: 1px dotted #9d9087;
-    padding: 2%;
-  }
-
-  .info-left{
-    margin-left: 1.5vw;
-    width: 35%;
+  /* LINEホバー時 */
+.sns-btn .fa-line:hover{
+  color:#00c300;
   }
   
-  .info-left p{
-    font-size: .8rem;
+  /* メールアイコンホバー時 */
+  .sns-btn .fa-envelope:hover{
+  color:#fca83b;		
   }
 
-  .info-right{
+/* 各アイコン 区切り線 */
+  .sns-content li+li:before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    height: 16vh;
+    margin-top: -6.5vh;
+    margin-left: -4vw;
+    border-right: 1px solid #585858;
+  }
+
+  
+  @media screen and (max-width: 1024px){
+
+      /*メインビジュアル*/
+  
+  .mainvisual img{
+    width: 100vw;
+    height: 50vh;
+  }
+
+  /*メッセージセクション*/
+  .message{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 60vh auto 0vh;
+  }
+
+  .message li{
+    width: 100vw;
+  }
+
+  /* リングイメージ */
+  .ring-img img{
+    width: 80vw;
+    height: 40vh;
+    margin-left: 0vw;
+  }
+
+  /*メッセージ*/
+  .message .message-txt{
+    width: 90%;
+    margin: 0 auto 10vh;
+    line-height: 5vh;
+  }
+
+  .ceo-name{
+    font-size: 1.5rem;
+  }
+
+  /*ニュースセクション*/
+  .news{
+    margin-top: 15vh;
+  }
+
+  .newslist{
+    width: 95%;
+    border-bottom: 1px solid #5555558e;
+  }
+
+  .newslist-item {
+    padding: 3vh 2vw;
+  }
+
+  /*お知らせかイベント*/
+  .news-item { 
+    /* ピンク部分の幅と高さ */
+    width: 10vw;
+    font-size: .7rem;
+    text-align: center;
+    padding-top: .5vw;
+  }
+
+  /*arrow 矢印*/
+  .arrow {
     display: none;
   }
 
-  .info-center{
-    width: 70%;
-    font-size: .8em;
-    line-height: 1.1rem;
-    float: right;
-    margin-left: 44vw;
+  /*コースセクション*/
+  .course{
+    width: 90%;
+    margin-top: 20vh;
   }
 
-  /*コピーライト*/
-  .copy-right{
-    text-align: center;
-    font-size: 0.6rem;
-    margin-top: 2vh;
+  .four-courses{
+    padding-top: 10vh;
   }
-}
 
+  .four-courses .flex{
+    width: 100%;
+    margin-bottom: 7vh;
+  }
 
+  .up-course{
+    height: 60%;
+  }
+
+  .up-course img{
+    padding: 5%;
+  }
+
+  .down-course{
+    height: 40%;
+    padding: 1vh 3vw;
+  }
+
+  .down-course h2{
+    font-size: .9rem;
+  }
+
+  .down-course p{
+    font-size: .8rem;
+  }
+
+  /* Read Moreボタン */
+  .read-more-contact-btn a {
+    margin-top: 7vh;
+  }
+
+  
+  /* 会社概要 */
+
+  /* 流動する丸 */
+  .fluid {
+    top: -15%;
+    right: 10%;
+  }
+
+  .tel{
+    width: 20%;
+  }
+
+  /* SNSセクション */
+  .sns-content{
+    width: 90%;
+  }
+
+  .sns-content li{
+    padding-left: 0vw;
+  }
+
+  /* ボタン全体 */
+  .sns-btn{
+    font-size: 30px;	
+    }
+
+    .sns-content p{
+      padding-top: 1vh;
+    }
+
+    /* インスタ・ライン少し大きく */
+    .sns-btn .fa-instagram,
+    .sns-btn .fa-line{
+    font-size: 30px;
+    }
+
+  /* 各アイコン 区切り線 */
+    .sns-content li+li:before {
+      top: 70%;
+      height: 10vh;
+    }
+
+  }

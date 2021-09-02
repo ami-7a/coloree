@@ -1,196 +1,110 @@
 
-/*メイン*/
-main{
-  max-width: 85%;
-  margin: 0 auto;
-  height: 280vh;/*メインの量に合わせて変える*/
-  padding-top: 20vh;
-  /*background-color: antiquewhite;*/ /*mainの高さ検証の為*/
-}
-
-/*フレックス化*/
-.flex{
-  display: flex;
+.introduction{
+  height: auto;
   width: 100%;
-  margin-top: 10vh;
+  display: flex;
+  padding:12%;
 }
 
-/*ママちゃんの写真*/
-.flex .mini-img{
+.ceo-img{
   width: 30%;
-  margin-left: 5vw;
-  margin-top: 1vh;
 }
 
-
-.flex .mom-img img{
-  width: 280px;
-  height: 280px;
+.ceo-img img{
+  width: 15vw;
+  height: 35vh;
   object-fit: cover;
-  opacity: 0.9;
-  border-radius: 50%;
+  box-shadow: -10px 10px 10px rgb(71, 71, 71);
+  margin-left: 8vw;
 }
 
-.ivy-img{
-  padding-left: 12vw;
-  margin-top: -14vh;
-}
-
-.ivy-img img{
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  transform: rotate(35deg);
-}
-
-.flex-txt{
+.about-ceo{
   width: 70%;
-  margin: 4vh 0vw;
-  padding-left: 3vw;
 }
 
-/*美香：Mika*/
-.mini-img h3{
-  font-size: 2rem;
-  font-weight: normal;
-  letter-spacing: .2vw;
-  margin-bottom: .2vh;
-  margin-top: 5vh;
+.ceo-name{
+  font-size: 3rem;
+  font-family: 'WindSong', cursive;
+  margin: 3vh auto 2vh;
 }
 
-.mini-img .jp-title{
-  font-size: 0.9rem;
+.ceo-comment{
+  width: 70%;
+  margin: 3vh auto;
+  line-height: 4vh;
 }
 
-
-/*各タイトル*/
-.title{
-  height: 13vh;
-  margin-top: 8vh; 
+.center-comment{
+  font-size: 2.5rem;
+  padding: 7vh 0vw;
+  font-family: 'WindSong', cursive;
+  background: linear-gradient(45deg, #e1d7ce 0%, #e1d7ce 50%, #c7b5b6 50%, #c7b5b6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.title-txt{
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: #726767;
-  position: relative;
+.txt-3{
+  display: flex;
+  width: 90%;
+  margin: 10vh auto 8vh;
 }
 
-/*タイトル下線*/
-.title-txt::after{
-  position: absolute;
-  content: " ";
-  display: block;
-  border-bottom: dotted .7px #000;
-  bottom: 50px;
-  width: 26%;
+.txt-3 .txt{
+  width: 30%;
+  margin: 0 auto;
 }
 
-/*タイトル右のイメージ*/
-.title-txt img{
-  width: 100px;
-  height: 140px;
-  padding-bottom: 2vh;
-  object-fit: contain;
-  vertical-align: middle;
-  margin-left: -10px;
+.txt .txt-title{
+  font-size: 1.3rem;
 }
 
-
-/*コンテンツ内のそれぞれテキスト*/
-.flex-txt .long-txt{
-  margin-top: 1vh;
-  letter-spacing: .02vw;
-  line-height: 6vh;
+.txt .long-txt{
+  width: 80%;
+  margin: 3vh auto 0vh;
+  line-height: 4vh;
 }
 
-h4{
-  margin: 2vh auto;
-}
+@media screen and (max-width:1024px){
 
-@media screen and (max-width:1024px) {
-
-    /*メイン*/
-  main{
-    max-width: 98%;
-    height: auto;
-  }
-
-  /*フレックス化*/
-  .flex{
+  .introduction{
     flex-direction: column;
-    /*margin-top: 10vh;*/
-    text-align: center;
+    margin: 7vh auto;
   }
-
-  /*ママちゃんの写真*/
-  .flex .mini-img{
+  
+  .ceo-img{
     width: 100%;
+  }
+  
+  .ceo-img img{
+    width: 40vw;
+    height: 30vh;
     margin-left: 0vw;
-    margin-top: 0vh;
+  }
+  
+  .about-ceo{
+    width: 100%;
+  }
+  
+  .ceo-name{
+    font-size: 2.5rem;
+    margin: 5vh auto 2vh;
   }
 
-
-  .flex .mom-img img{
-    width: 190px;
-    height: 190px;
+  .center-comment{
+    font-size: 2rem;
+    padding: 5vh 0vw;
   }
-
-  .ivy-img{
-    padding-left: 30vw;
-    margin-top: -10vh;
+  
+  .txt-3{
+    flex-direction: column;
   }
-
-  .ivy-img img{
-    height: 110px;
-    width: 110px;
-    opacity: 0.6;
+  
+  .txt-3 .txt{
+    width: 100%;
+    margin: 7vh auto;
   }
-
-  .flex-txt{
-    width: 88%;
-    margin: 4vh auto;
-    padding-left: 0vw;
-  }
-
-  /*美香：Mika*/
-  .mini-img h3{
-    font-size: 1.2rem;
-  }
-
-  .mini-img .jp-title{
-    font-size: 0.75rem;
-  }
-
-
-  /*各タイトル*/
-  .title{
-    height: auto;
-    margin-top: 10vh; 
-  }
-
-  .title-txt{
-    font-size: .95rem;
-  }
-
-  /*タイトル下線*/
-  .title-txt::after{
-    bottom: 50px;
-    left: 24%;
-    width: 30%;
-  }
-
-  /*タイトル右のイメージ*/
-  .title-txt img{
-    width: 90px;
-    height: 130px;
-    padding-bottom: 1.8vh;
-  }
-
-
-  /*コンテンツ内のそれぞれテキスト*/
-  .flex-txt .long-txt{
-    font-size: .9em;
-  }
-
+  
+ 
 }

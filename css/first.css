@@ -1,17 +1,11 @@
-
-/*メイン*/
-main{
-  max-width: 85%;
-  margin: 0 auto;
-  height: 350vh;
-  padding-top: 20vh;
-  /*background-color: antiquewhite;*/ /*mainの高さ検証の為*/
+.contents{
+  margin-bottom: 10vh;
 }
 
 .flex{
   display: flex;
   width: 100%;
-  margin-top: 10vh;
+  height: 80%;
 }
 
 .flex .mini-img{
@@ -19,47 +13,35 @@ main{
 }
 
 .flex .mini-img img{
-  width: 540px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .flex-txt{
   width: 50%;
-  padding: 3vh 4vw;
+  padding: 2% 10%;
+  margin: auto;
 }
 
 /*コンテンツごとのタイトル*/
 .flex-txt h3{
   font-size: 2rem;
   font-weight: normal;
-  letter-spacing: .2vw;
   margin-bottom: .2vh;
 }
 
 /*コンテンツ内のそれぞれテキスト*/
 .flex-txt .long-txt{
   margin-top: 2vh;
-  letter-spacing: .02vw;
   line-height: 7vh;
 }
 
 @media screen and (max-width:1024px){
 
-    /*メイン*/
-  main{
-    max-width: 98%;
-    height: auto;
-  }
-
   .flex{
     flex-direction: column-reverse;
-    margin-top: 4vh;
-    text-align: center;
-  }
-
-  .aboutus{
-    margin-top: 10vh;
+    margin-top: 3vh;
   }
 
   .flex .mini-img{
@@ -86,7 +68,7 @@ main{
 
   /*コンテンツ内のそれぞれテキスト*/
   .flex-txt .long-txt{
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
     line-height: 4.5;
   }
 
@@ -95,12 +77,3 @@ main{
   }
   
 }
-
-
-
-
-
-
-
-
-

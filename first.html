@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorful｜初めての方へ</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful｜初めての方へ</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/first.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
 
-  <link rel="stylesheet" href="css/ress.css"><!--リセットCSS-->
-  <link rel="stylesheet" href="css/common.css"><!--共通CSS-->
-  <link rel="stylesheet" href="css/commom2.css"><!--共通CSS2-->
-  <link rel="stylesheet" href="css/first.css"><!--firstのCSS-->
-  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-  <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
-
-  <!--google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+    
 
 
-  <!--nav ページの場所 上にdot-->
-  <style>
-    .dot-text {
-      font-size: 2rem;
-      text-emphasis: circle orange;
-      -webkit-text-emphasis: circle  orange;
-    }
-  </style>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
 
-  <!--ハンバーガーメニュー-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
+    <!--ハンバーガーメニュー-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(function() {
+      $('.three_line_btn').on("click", function(){
+    
+        $(this).toggleClass('open');
+        $('#g_nav').toggleClass('open');
+      });
+    
+    });
+    
+    // メニューをクリックされたら、非表示にする
     $(function() {
-    $('.btn-gNav').on("click", function(){
-  
-      $(this).toggleClass('open');
-      $('#gNav').toggleClass('open');
+      $('.g_nav-menu li a').on("click", function(){
+        $('#g_nav').removeClass('open');
+      });
     });
-  
-  });
-  
-  // メニューをクリックされたら、非表示にする
-  $(function() {
-    $('.gNav-menu li a').on("click", function(){
-       $('#gNav').removeClass('open');
-    });
-  });
-  </script>
-  
-  <!--font awesome コード-->
-  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous">
-  </script>
-</head>
+    </script>
 
-<!--スクロールでlogoを画面top固定-->
-<script type="text/javascript">
-  $(function(){
-    $(window).scroll(function(){
-      var obj = $('.company-name');
-      scroll = $(window).scrollTop();
-      if (scroll > 1) {
-        obj.addClass('isSmall');
-      } else{
-        obj.removeClass('isSmall');
-      }
-    })
-  });
-</script>
+  </head>
+  <body>
 
-<body>
-  <header><!--全ページ共通ヘッダー-->
-    <!--会社名-->
-    <section class="company-name">
-      <img src="img/colorful.png" alt="Companylogo">
-    </section>
+    <header class="header">
+      <!-- ヘッダー左（ロゴ、会社名） -->
+      <section class="header-left">
+        <div class="site-logo"><img src="img/colorful-logo1.png" alt="ロゴ"></div>
+      </section>
 
-    <!--グロナビ-->
-    <nav class="gnavi">
-      <div class="gnavi-inner">
-        <ul>
-          <li><a href="index.html" ><span>TOP</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span >初め<span class="dot-text">て</span>の方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </nav>
+      <!-- ヘッダー右（グロナビ） -->
+      <section class="header-right">
+        <nav id="nav">
+            <li>
+              <a href="index.html"><span>TOP</span></a>
+            </li>
+
+            <li>
+              <a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a>
+            </li>
+
+            <li>
+              <a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a>
+            </li>
+
+            <li>
+              <a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a>
+            </li>
+
+            <li>
+              <a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a>
+            </li>
+
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a>
+            </li>
+
+            <li>
+              <a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
+            </li>
 
 
-    <!--全ページ共通ハンバーガーメニュー-->
+        </nav>
+      </section>
+
+      <!--共通ハンバーガーメニュー-->
     <div id="hamburger">
-      <p class="btn-gNav">
+      <p class="three_line_btn">
         <span></span>
         <span></span>
         <span></span>
       </p>
 
       <!--ハンバーガー内のグロナビ-->
-      <nav id="gNav">
-        <div class="gNav-menu">
-          <a class="gNav-img" href="index.html"><img src="img/colorful-white.png" alt=""></a>
+      <nav id="g_nav">
+        <div class="g_nav-menu">
+
+          <div class="g_nav-img"><img src="img/colorful-white-logo.png" alt=""></div>
+
           <ul>
             <li><a href="index.html"><span>トップページ</span></a></li>
+
             <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
+
             <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
+
             <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
+
             <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
+
             <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
+
           </ul>
 
           <!--無料相談はこちらボタン-->
-          <div class="contactbtn"><a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a></div>
+          <div class="contactbtn">
+            <a href="contact.html" target="_blank" rel="noopener">
+              <span>＞ 無料相談はこちら</span>
+            </a>
+          </div>
         </div>
 
         <!--ハンバーガー内SNSセクション-->
@@ -137,26 +145,28 @@
       </nav>
     </div>
 
-  </header>
 
-  <!--メイン-->
-  <main class="main">
-    <!--CSS共通セクションタイトル-->
-    <section class="sectiontitle">
-      <h1>First Visit</h1>
-      <p>-初めての方へ-</p>
+
+    </header>
+
+    <main class="main">
+    <!--共通トップタイトル-->
+    <section class="top-title">
+      <h1 class="section-title">First Visit</h1>
+      <p class="small-title">-初めての方へ-</p>
     </section>
 
-    <!--CSS共通メインイメージ-->
-    <section class="mainimg">
+    <!--共通メインイメージ-->
+    <section class="main-img">
       <img src="first.img/twoshoes.jpg" alt="初めての方へ">
     </section>
 
+    <!-- コンテンツ -->
     <section class="contents">
-      <h2>カラフル福岡を初めてご利用される方へ</h2>
+      <h2 class="pink-txt">カラフル福岡を初めてご利用される方へ</h2>
 
       <!--１つ目当社について-->
-      <div class="aboutus flex">
+      <div class="company flex">
         <div class="mini-img">
           <img src="first.img/hand&ring.jpg" alt="当社について">
         </div>
@@ -197,50 +207,39 @@
       </div>
     </section>
 
-    <!--(共通)無料相談はこちらボタン-->
-    <section class="contact-btn">
-      <a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a>
-    </section>
-
-  </main>
-
-  <!--全ページ共通フッター-->
-  <footer id="footer">
-
-    <!--会社情報-->
-    <div class="info">
-      <!--左-->
-      <div class="info-left">
-        <p>カラフル福岡<br>結婚相談所</p>
-      </div>
-
-      <!--真ん中-->
-      <div class="info-center">
-        <p class="adress">〒810-0024<br>福岡県福岡市中央区桜坂</p>
-        <a class="tell" href="tel:092-753-6668">電話：０９２-７５３-６６６８</a> 
-        <p class="jobhour">受付時間：１０:００~１７:００</p>
-        <p class="jobdays">定休日：不定休</p>
-        <p class="car-lot">パーキング：近くにあり</p>
-      </div>
-
-      <!--右 グロナビ-->
-      <div class="info-right">
-        <ul class="info-nav">
-          <li><a href="index.html"><span>トップページ</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-        </ul>   
-        <ul class="info-nav2"> 
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
+    <!--共通コンタクトボタン-->
+    <div class="read-more-contact-btn">
+      <a href="contact.html" target="_blank" rel="noopener">Contact Us</a>
     </div>
-    <!--コピーライト-->
-    <p class="copy-right">©︎2021 colorful all rights reserved.</p>
-  </footer>
-    
-</body>
+
+      
+    </main>
+
+    <footer>
+      <section class="footer">
+        
+        <div class="footer-left">
+          <li>
+            <img src="img/colorful-white-logo.png" alt="サイトロゴ">
+          </li>
+        </div>
+
+        <div class="footer-right">
+          <li>
+            <p>カラフル福岡結婚相談所</p>
+            <p>810-0024<br>福岡県福岡市中央区桜坂<br>
+              <a href="#" target="_blank" rel="noopener noreferrer" >[google map]</a></p>
+            <p><a href="tel:092-753-6668" target="_blank" rel="noopener noreferrer" >tel:092-753-6668</a></p>
+          </li>
+        </div>
+      </section>
+
+      <section class="copy-right">
+        <p>©︎ 2021, Colorful inc, All Rights Reserved. 
+        </p>
+      </section>
+
+    </footer>
+
+  </body>
 </html>

@@ -1,163 +1,111 @@
-
-/*メイン*/
-main{
-  max-width: 85%;
-  margin: 0 auto;
-  height: 280vh;/*メインの量に合わせて変える*/
-  padding-top: 20vh;
-  /*background-color: antiquewhite;*/ /*mainの高さ検証の為*/
-}
-
-
-/*フレックス化*/
-.flex{
-  display: flex;
-  width: 100%;
-  margin-top: 10vh;
-}
-
-.flex .mini-img{
-  width: 30%;
-  margin-left: 5vw;
-  margin-top: 3vh;
-}
-
-
-.flex .mini-img img{
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  opacity: 0.8;
-  border-radius: 50%;
-  transition: all 1s linear 0s;  
-}
-
-.flex .mini-img img:hover {
-  cursor: pointer;
-	transform: rotateZ( 360deg );
-}
-
-.flex-txt{
-  width: 70%;
-  padding: 3vh 4vw;
+.reason{
+  width: 50%;
+  margin: 15vh auto;
 }
 
 /*コンテンツごとのタイトル*/
-.flex-txt h3{
+.txt h3{
   font-size: 2rem;
   font-weight: normal;
-  letter-spacing: .2vw;
   margin-bottom: .2vh;
 }
 
-.flex-txt .jp-title{
+.txt .jp-title{
   font-size: 0.9rem;
 }
 
 /*コンテンツ内のそれぞれテキスト*/
-.flex-txt .long-txt{
+.txt .long-txt{
   margin-top: 2vh;
-  letter-spacing: .02vw;
   line-height: 7vh;
 }
 
-.event{
-  position: relative;
-}
-
-/*arrow 矢印*/
-.arrow {
+/* 流動する丸 */
+.fluid-1{
+  width: 60vh;/*横幅*/
+  height: 50vh;/*縦幅*/
+  background:#f1cecea9;
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
   position: absolute;
-  width: 2vw;
-  height: .1vh;
-  background: #9d9087;
-  top: 90%;
-  right: 10vw;
+  top: 120vh;
+  right: 60%;
+  z-index: -10; /* 要素を後ろへ */
 }
 
-.arrow::after {
+.fluid-2{
+  width: 30vh;/*横幅*/
+  height: 30vh;/*縦幅*/
+  background:#f1cecea9;
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
   position: absolute;
-  content: "";
-  display: block;
-  width: .5vw;
-  height: .1vh;
-  background: #9d9087;
-  transform: rotate(45deg);
-  right: 0;
-  bottom: 2px;
+  top: 200vh;
+  right: 20%;
+  z-index: -10; /* 要素を後ろへ */
 }
 
-@media screen and (max-width:1024px){
+.fluid-3{
+  width: 25vh;/*横幅*/
+  height: 20vh;/*縦幅*/
+  background:#f1cecea9;
+  animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
+  position: absolute;
+  top: 230vh;
+  right:  62%;
+  z-index: -10; /* 要素を後ろへ */
+}
 
-
-  /*メイン*/
-  main{
-    max-width: 100vw;
-    height: auto;
+@keyframes fluidrotate { 
+ 
+	  
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
   }
-
-
-  /*フレックス化*/
-  .flex{
-    flex-direction: column;
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
   }
-
-  .flex .mini-img{
-    width: 100%;
-    margin-left: 0vw;
-    margin-top: 0vh;
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
   }
-
-
-  .flex .mini-img img{
-    width: 100vw;
-    height: 40vh;
-    opacity: .9;
-    border-radius: 0%;
-    transition: none;  
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
   }
-
-  .flex .mini-img img:hover {
-    cursor: inherit;
-    transform: none;
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
   }
-
-  .flex-txt{
-    width: 100vw;
-    text-align: center;
-    padding: 3vh 4vw;
-     margin-bottom: -2vh;
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
   }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+	  
+}
 
+@media screen and (max-width: 1024px){
+  .reason{
+    width: 80%;
+  }
+  
   /*コンテンツごとのタイトル*/
-  .flex-txt h3{
-    margin-top: 7vh;
-    font-size: 1.6rem;
-   
+  .txt h3{
+    font-size: 1.5rem;
   }
-
-  .flex-txt .jp-title, p{
-    font-size: .9em;
+  
+  .txt .jp-title{
+    font-size: 0.8rem;
   }
-
+  
   /*コンテンツ内のそれぞれテキスト*/
-  .flex-txt .long-txt{
-    margin: 2vh 2vw;
-    line-height: 4.5;
+  .txt .long-txt{
+    margin-top: 3vh;
   }
-
-  /*arrow 矢印*/
-  .arrow {
-    width: 5vw;
-    top: 80vh;
-    right: 10%;
-  }
-
-  .arrow::after {
-    width: 1.5vw;
-    height: .1vh;
-    right: -1.1px;
-    bottom: 2.9px;
+  
+  /* 流動する丸 */
+  .fluid-2{
+    width: 15vh;/*横幅*/
+    height: 15vh;/*縦幅*/
+    top: 190vh;
+    right: 1vw;
   }
   
 }

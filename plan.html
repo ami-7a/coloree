@@ -1,102 +1,127 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colorful｜プラン料金</title>
-  <link rel="stylesheet" href="css/ress.css"><!--リセットCSS-->
-  <link rel="stylesheet" href="css/common.css"><!--共通CSS-->
-  <link rel="stylesheet" href="css/commom2.css"><!--共通CSS2-->
-  <link rel="stylesheet" href="css/plan.css"><!--planのCSS-->
-  <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-  <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful｜プラン料金</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/plan.css">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
 
-  <!--google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=WindSong&display=swap" rel="stylesheet">
+    
 
 
-  <!--nav ページの場所 上にdot-->
-  <style>
-    .dot-text {
-      font-size: 2rem;
-      text-emphasis: circle orange;
-      -webkit-text-emphasis: circle  orange;
-    }
-  </style>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous"></script>
 
-  <!--ハンバーガーメニュー-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
+    <!--ハンバーガーメニュー-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      $(function() {
+      $('.three_line_btn').on("click", function(){
+    
+        $(this).toggleClass('open');
+        $('#g_nav').toggleClass('open');
+      });
+    
+    });
+    
+    // メニューをクリックされたら、非表示にする
     $(function() {
-    $('.btn-gNav').on("click", function(){
-  
-      $(this).toggleClass('open');
-      $('#gNav').toggleClass('open');
+      $('.g_nav-menu li a').on("click", function(){
+        $('#g_nav').removeClass('open');
+      });
     });
-  
-  });
-  
-  // メニューをクリックされたら、非表示にする
-  $(function() {
-    $('.gNav-menu li a').on("click", function(){
-       $('#gNav').removeClass('open');
-    });
-  });
-  </script>
-  
-  <!--font awesome コード-->
-  <script src="https://kit.fontawesome.com/931c5e739a.js" crossorigin="anonymous">
-  </script>
-</head>
+    </script>
 
-<body>
-  <header><!--全ページ共通ヘッダー-->
-    <!--会社名-->
-    <section class="company-name">
-      <img src="img/colorful.png" alt="Companylogo">
-    </section>
+  </head>
+  <body>
 
-    <!--グロナビ-->
-    <nav class="gnavi">
-      <div class="gnavi-inner">
-        <ul>
-          <li><a href="index.html"><span>TOP</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラ<span class="dot-text">ン</span>料金</span></a></li>
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </nav>
+    <header class="header">
+      <!-- ヘッダー左（ロゴ、会社名） -->
+      <section class="header-left">
+        <div class="site-logo"><img src="img/colorful-logo1.png" alt="ロゴ"></div>
+      </section>
 
-    <!--全ページ共通ハンバーガーメニュー-->
+      <!-- ヘッダー右（グロナビ） -->
+      <section class="header-right">
+        <nav id="nav">
+            <li>
+              <a href="index.html"><span>TOP</span></a>
+            </li>
+
+            <li>
+              <a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a>
+            </li>
+
+            <li>
+              <a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a>
+            </li>
+
+            <li>
+              <a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a>
+            </li>
+
+            <li>
+              <a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a>
+            </li>
+
+            <li>
+              <a href="faq.html" target="_blank" rel="noopener"><span>FAQ</span></a>
+            </li>
+
+            <li>
+              <a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
+            </li>
+
+
+        </nav>
+      </section>
+
+      <!--共通ハンバーガーメニュー-->
     <div id="hamburger">
-      <p class="btn-gNav">
+      <p class="three_line_btn">
         <span></span>
         <span></span>
         <span></span>
       </p>
 
       <!--ハンバーガー内のグロナビ-->
-      <nav id="gNav">
-        <div class="gNav-menu">
-          <a class="gNav-img" href="index.html"><img src="img/colorful-white.png" alt=""></a>
+      <nav id="g_nav">
+        <div class="g_nav-menu">
+
+          <div class="g_nav-img"><img src="img/colorful-white-logo.png" alt=""></div>
+
           <ul>
             <li><a href="index.html"><span>トップページ</span></a></li>
+
             <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
+
             <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
+
             <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
+
             <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
+
             <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
+
           </ul>
 
           <!--無料相談はこちらボタン-->
-          <div class="contactbtn"><a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a></div>
+          <div class="contactbtn">
+            <a href="contact.html" target="_blank" rel="noopener">
+              <span>＞ 無料相談はこちら</span>
+            </a>
+          </div>
         </div>
 
         <!--ハンバーガー内SNSセクション-->
@@ -119,145 +144,133 @@
         </div>
       </nav>
     </div>
-  </header>
-
-  
-<!--メイン-->
-<main class="main">
-
-  <!--CSS共通セクションタイトル-->
-  <section class="sectiontitle">
-    <h1>Plan & Price</h1>
-    <p>-プランと料金-</p>
-  </section>
-
-  <!--CSS共通メインイメージ-->
-  <section class="mainimg">
-    <img src="plan.img/price-tag.png" alt="plan&price">
-  </section>
-
-  <section class="contents">
-    <!--共通 h2-->
-    <h2>カラフル福岡 各プランと料金</h2>
 
 
-    <!--プラン１:スタンダードコース-->
-    <div class="standard flex">
-      <div class="mini-img">
-        <img src="plan.img/plan1.png" alt="スタンダードコース">
+
+    </header>
+
+    <main class="main">
+      <!--共通セクションタイトル-->
+      <section class="top-title">
+        <h1 class="section-title">Plan & Price</h1>
+        <p class="small-title">-プランと料金-</p>
+      </section>
+
+      <!--共通メインイメージ-->
+      <section class="main-img">
+        <img src="plan.img/price-tag.png" alt="plan&price">
+      </section>
+
+      <section class="contents">
+        <!--共通 h2 -->
+        <h2 class="pink-txt">カラフル福岡 各プランと料金</h2 >
+
+
+        <!--プラン１:スタンダードコース-->
+        <div class="standard flex">
+          <div class="mini-img">
+            <img src="plan.img/plan1.png" alt="スタンダードコース">
+          </div>
+          <div class="flex-txt">
+            <h3>Standard Corse</h3>
+            <p class="jp-title">-スタンダードコース-</p>
+            <p class="long-txt">人気No1コース！自分で検索以外にもプロからの紹介もあります。<br>フォロー面談・電話・メールサポート付き。</p>
+            <dl>
+              <dt>入会金</dt>
+              <dd>50,000円</dd>
+              <dt>登録料</dt>
+              <dd>20,000円</dd>
+              <dt>月会費</dt>
+              <dd>10,000円</dd>
+              <dt>お見合い料</dt>
+              <dd>0円</dd>
+              <dt>ご成婚料</dt>
+              <dd>100,000円</dd>
+            </dl>
+          </div>
+        </div>
+
+        <!--プラン２:シンプルコース-->
+        <div class="simple flex">
+          <div class="flex-txt">
+            <h3>Simple Corse</h3>
+            <p class="jp-title">-シンプルコース-</p>
+            <p class="long-txt">経費を抑えたい方、入会に興味があるが自分でパートナーを探したい方や、困ったときだけサポートしてほしい方にお勧めのコースです。</p>
+            <dl>
+              <dt>入会金</dt>
+              <dd>30,000円</dd>
+              <dt>登録料</dt>
+              <dd>20,000円</dd>
+              <dt>月会費</dt>
+              <dd>5,000円</dd>
+              <dt>お見合料</dt>
+              <dd>3,000円</dd>
+              <dt>ご成婚料</dt>
+              <dd>50,000円</dd>
+            </dl>
+          </div>
+
+          <div class="mini-img">
+            <img src="plan.img/plan2.png" alt="シンプルコース">
+          </div>
+        </div>
+
+        <!--プラン３:	プレミアコース-->
+        <div class="premier flex">
+          <div class="mini-img">
+            <img src="plan.img/plan3.png" alt="プレミアコース">
+          </div>
+          <div class="flex-txt">
+            <h3>Premier Corse</h3>
+            <p class="jp-title">-プレミアコース-</p>
+            <p class="long-txt">効率よく活動を進めたい方やお見合いまでの心構えや身支度のサポートをさせていただきます。</p>
+            <dl>
+              <dt>入会金</dt>
+              <dd>100,000円</dd>
+              <dt>登録料</dt>
+              <dd>20,000円</dd>
+              <dt>月会費</dt>
+              <dd>20,000円</dd>
+              <dt>お見合料</dt>
+              <dd>0円</dd>
+              <dt>ご成婚料</dt>	
+              <dd>200,000円</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      
+      <!--共通コンタクトボタン-->
+      <div class="read-more-contact-btn">
+        <a href="contact.html" target="_blank" rel="noopener">Contact Us</a>
       </div>
-      <div class="flex-txt flex-txt1">
-        <h3>Standard Corse</h3>
-        <p class="jp-title">-スタンダードコース-</p>
-        <p class="long-txt">人気No1コース！自分で検索以外にもプロからの紹介もあります。<br>フォロー面談・電話・メールサポート付き。</p>
-        <dl>
-          <dt>入会金</dt>
-          <dd>50,000円</dd>
-          <dt>登録料</dt>
-          <dd>20,000円</dd>
-          <dt>月会費</dt>
-          <dd>10,000円</dd>
-          <dt>お見合い料</dt>
-          <dd>0円</dd>
-          <dt>ご成婚料</dt>
-          <dd>100,000円</dd>
-        </dl>
-      </div>
-    </div>
+    </main>
 
-    <!--プラン２:シンプルコース-->
-    <div class="simple flex">
-      <div class="flex-txt flex-txt2">
-        <h3>Simple Corse</h3>
-        <p class="jp-title">-シンプルコース-</p>
-        <p class="long-txt">経費を抑えたい方・入会に興味があるが自分でパートナーを探したい方や、困ったときだけサポートしてほしい方におすめのコースです。</p>
-        <dl>
-          <dt>入会金</dt>
-          <dd>30,000円</dd>
-          <dt>登録料</dt>
-          <dd>20,000円</dd>
-          <dt>月会費</dt>
-          <dd>5,000円</dd>
-          <dt>お見合料</dt>
-          <dd>3,000円</dd>
-          <dt>ご成婚料</dt>
-          <dd>50,000円</dd>
-        </dl>
-      </div>
+    <footer>
+      <section class="footer">
+        
+        <div class="footer-left">
+          <li>
+            <img src="img/colorful-white-logo.png" alt="サイトロゴ">
+          </li>
+        </div>
 
-      <div class="mini-img">
-        <img src="plan.img/plan2.png" alt="シンプルコース">
-      </div>
-    </div>
+        <div class="footer-right">
+          <li>
+            <p>カラフル福岡結婚相談所</p>
+            <p>810-0024<br>福岡県福岡市中央区桜坂<br>
+              <a href="#" target="_blank" rel="noopener noreferrer" >[google map]</a></p>
+            <p><a href="tel:092-753-6668" target="_blank" rel="noopener noreferrer" >tel:092-753-6668</a></p>
+          </li>
+        </div>
+      </section>
 
-    <!--プラン３:	プレミアコース-->
-    <div class="premier flex ">
-      <div class="mini-img">
-        <img src="plan.img/plan3.png" alt="プレミアコース">
-      </div>
-      <div class="flex-txt flex-txt3">
-        <h3>Premier Corse</h3>
-        <p class="jp-title">-プレミアコース-</p>
-        <p class="long-txt">効率よく活動を進めたい方やお見合いまでの心構えや身支度のサポートをさせていただきます。</p>
-        <dl>
-          <dt>入会金</dt>
-          <dd>100,000円</dd>
-          <dt>登録料</dt>
-          <dd>20,000円</dd>
-          <dt>月会費</dt>
-          <dd>20,000円</dd>
-          <dt>お見合料</dt>
-          <dd>0円</dd>
-          <dt>ご成婚料</dt>	
-          <dd>200,000円</dd>
-        </dl>
-      </div>
-    </div>
-  </section>
-    
-  <!--(共通)無料相談はこちらボタン-->
-  <section class="contact-btn">
-    <a href="contact.html" target="_blank" rel="noopener"><span>＞ 無料相談はこちら</span></a>
-  </section>
-</main>
+      <section class="copy-right">
+        <p>©︎ 2021, Colorful inc, All Rights Reserved. 
+        </p>
+      </section>
 
-  <!--全ページ共通フッター-->
-  <footer id="footer">
+    </footer>
 
-    <!--会社情報-->
-    <div class="info">
-      <!--左-->
-      <div class="info-left">
-        <p>カラフル福岡<br>結婚相談所</p>
-      </div>
-
-      <!--真ん中-->
-      <div class="info-center">
-        <p class="adress">〒810-0024<br>福岡県福岡市中央区桜坂</p>
-        <a class="tell" href="tel:092-753-6668">電話：０９２-７５３-６６６８</a> 
-        <p class="jobhour">受付時間：１０:００~１７:００</p>
-        <p class="jobdays">定休日：不定休</p>
-        <p class="car-lot">パーキング：近くにあり</p>
-      </div>
-
-      <!--右 グロナビ-->
-      <div class="info-right">
-        <ul class="info-nav">
-          <li><a href="index.html"><span>トップページ</span></a></li>
-          <li><a href="first.html" target="_blank" rel="noopener"><span>初めての方へ</span></a></li>
-          <li><a href="why.html" target="_blank" rel="noopener"><span>選ばれる理由</span></a></li>
-          <li><a href="plan.html" target="_blank" rel="noopener"><span>プラン料金</span></a></li>
-        </ul>   
-        <ul class="info-nav2"> 
-          <li><a href="counselor.html" target="_blank" rel="noopener"><span>カウンセラー</span></a></li>
-          <li><a href="faq.html" target="_blank" rel="noopener"><span>よくある質問</span></a></li>
-          <li><a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a></li>
-        </ul>
-      </div>
-    </div>
-    <!--コピーライト-->
-    <p class="copy-right">©︎2021 colorful all rights reserved.</p>
-  </footer>
-  
-</body>
+  </body>
 </html>
