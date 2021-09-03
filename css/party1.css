@@ -1,0 +1,80 @@
+
+.flex{
+  display: flex;
+  width: 100%;
+  margin-top: 20vh;
+}
+
+.flex .mini-img{
+  width: 40%;
+}
+
+.flex .mini-img img{
+  width: 27vw;
+  height: 65vh;
+  object-fit: cover;
+  padding-left: 2vw;
+}
+
+.flex-txt{
+  width: 60%;
+  padding: 4vh 12vw 0vh 0vh;
+}
+
+/*コンテンツごとのタイトル*/
+.flex-txt h3{
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+/*コンテンツ内のそれぞれテキスト*/
+.flex-txt .long-txt{
+  margin-top: 2vh;
+  line-height: 8vh;
+}
+
+
+@media screen and (max-width:1024px){
+
+  .flex{
+    flex-direction: column-reverse;
+    margin-top: 10vh;
+  }
+
+  .flex-txt{
+    width: 100%;
+    padding-left: 10vw;
+  }
+
+  /*コンテンツごとのタイトル*/
+  .flex-txt h3{
+    font-size: 1.5rem;
+  }
+
+  .flex-txt p{
+    font-size: .8em;
+  }
+
+  /*コンテンツ内のそれぞれテキスト*/
+  .flex-txt .long-txt{
+    margin: 5vh auto 0vh;
+    line-height: 4.5;
+  }
+  .flex .mini-img{
+    width: auto;
+  }
+
+  .flex .mini-img img{
+    width: 60vw;
+    height: 70vh;
+    object-fit: contain;
+    padding-right: 3vw;
+  }
+
+  br{
+    display: none;
+  }
+
+
+
+}
