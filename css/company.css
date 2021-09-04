@@ -1,0 +1,48 @@
+.contents{
+  margin: 20vh;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 5vh;
+}
+
+/*コンテンツ内のそれぞれテキスト*/
+.company-txt{
+  margin-top: 2vh;
+  line-height: 4vh;
+}
+
+
+@media screen and (max-width:1024px){
+
+  .flex{
+    flex-direction: column-reverse;
+    margin-top: 4vh;
+  }
+  
+  .flex-txt{
+    width: 100%;
+    padding-left: 10vw;
+  }
+
+  /*コンテンツごとのタイトル*/
+  .flex-txt h3{
+    font-size: 1.5rem;
+  }
+
+  .flex-txt p{
+    font-size: .8em;
+  }
+
+  /*コンテンツ内のそれぞれテキスト*/
+  .flex-txt .long-txt{
+    margin: 3vh auto;
+    line-height: 4.5;
+  }
+  
+
+
+
+}
