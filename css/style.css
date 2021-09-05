@@ -337,7 +337,8 @@
   .message{
     display: flex;
     flex-direction: column-reverse;
-    margin: 60vh auto 0vh;
+    margin: 0vh auto 0vh;
+    padding-top: 10vh;
   }
 
   .message li{
@@ -376,14 +377,23 @@
     padding: 3vh 2vw;
   }
 
+  .newslist-date {
+    flex-direction: column;
+    margin: 0vh 5vw;
+    text-align: center;
+
+  }
+
   /*お知らせかイベント*/
   .news-item { 
     /* ピンク部分の幅と高さ */
     width: 10vw;
     font-size: .7rem;
     text-align: center;
-    padding-top: .5vw;
+    padding-top: .2vh;
+    margin-top: 1vh;
   }
+
 
   /*arrow 矢印*/
   .arrow {
@@ -424,6 +434,7 @@
 
   .down-course p{
     font-size: .8rem;
+    padding: 1vh 6vw;
   }
 
   /* Read Moreボタン */
