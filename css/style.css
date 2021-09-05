@@ -379,7 +379,7 @@
 
   .newslist-date {
     flex-direction: column;
-    margin: 0vh 5vw;
+    margin: 0vh 4vw;
     text-align: center;
 
   }
@@ -387,7 +387,7 @@
   /*お知らせかイベント*/
   .news-item { 
     /* ピンク部分の幅と高さ */
-    width: 10vw;
+    width: 15vw;
     font-size: .7rem;
     text-align: center;
     padding-top: .2vh;
