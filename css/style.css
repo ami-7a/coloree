@@ -374,21 +374,20 @@
   }
 
   .newslist-item {
-    padding: 3vh 2vw;
+    padding: 2vh 1.5vw;
   }
 
   .newslist-date {
     flex-direction: column;
     margin: 0vh 4vw;
     text-align: center;
-
   }
 
   /*お知らせかイベント*/
   .news-item { 
     /* ピンク部分の幅と高さ */
     width: 15vw;
-    font-size: .7rem;
+    font-size: .6rem;
     text-align: center;
     padding-top: .2vh;
     margin-top: 1vh;
@@ -412,7 +411,8 @@
 
   .four-courses .flex{
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: 7vh;
+    padding-bottom: 5vh;
   }
 
   .up-course{
