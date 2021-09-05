@@ -412,7 +412,7 @@
 
   .four-courses .flex{
     width: 100%;
-    margin-bottom: 7vh;
+    margin-bottom: 10vh;
   }
 
   .up-course{
@@ -434,7 +434,7 @@
 
   .down-course p{
     font-size: .8rem;
-    padding: 1vh 6vw;
+    padding: 2vh 6vw 10vh;
   }
 
   /* Read Moreボタン */
