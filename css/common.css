@@ -393,87 +393,87 @@ li{
     object-fit: contain;
   }
 
-  /*section-title共通*/
-.section-title{ 
-  font-size: 2.2rem;
-}
+    /*section-title共通*/
+  .section-title{ 
+    font-size: 2.2rem;
+  }
 
-/*small-title共通*/
-.small-title{
-  font-size: .9rem;
-}
+  /*small-title共通*/
+  .small-title{
+    font-size: .9rem;
+  }
 
-/* フッター */
-.footer{
-  margin-top: 20vh;
-}
+  /* フッター */
+  .footer{
+    margin-top: 20vh;
+  }
 
-.footer-left{
-  width: 50%;
-}
+  .footer-left{
+    width: 50%;
+  }
 
-.footer-left img{
-  height: 16vh;
-  width: 40vw;
-  object-fit: contain;
-  padding-left: 2vw;
-  
-}
+  .footer-left img{
+    height: 16vh;
+    width: 40vw;
+    object-fit: contain;
+    padding-left: 2vw;
+    
+  }
 
-.footer-right{
-  width: 50%;
-  font-size: .8rem;
-  padding-left: -2vw;
-}
+  .footer-right{
+    width: 50%;
+    font-size: .8rem;
+    padding-left: -2vw;
+  }
 
-/* コピーライト */
-.copy-right{
-  padding: 1vh 0vw;
-  font-size: .7rem;
-}
-  
-}
+  /* コピーライト */
+  .copy-right{
+    padding: 1vh 0vw;
+    font-size: .7rem;
+  }
+    
+  }
 
-/* 2ページ目以降の共通CSS */
-.top-title{
-  margin: 13vh auto 4vh;
-}
-
-.main-img img{
-  width: 90vw;
-  height: 70vh;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-.pink-txt{
-  width: 50%;
-  margin: 10vh auto;
-  text-align: center;
-  font-size: 1.3rem;
-  color: #fafafa;
-  background-color: #c49292f5;
-  border: 1px solid #c49292f5;
-  padding: 1vh 1vw;
-  border-radius: 20px;
-}
-
-.under-line{
-  border-bottom: .2px dashed #58585893;
-  display: block;
-  height: 7vh;
-
-}
-
-@media screen and (max-width: 1024px){
+  /* 2ページ目以降の共通CSS */
+  .top-title{
+    margin: 13vh auto 4vh;
+  }
 
   .main-img img{
-    width: 100vw;
-    height: 60vh;
+    width: 90vw;
+    height: 70vh;
+    object-fit: cover;
+    margin: 0 auto;
   }
 
   .pink-txt{
-    width: 98%;
-    font-size: 1rem;
+    width: 50%;
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fafafa;
+    background-color: #c49292f5;
+    border: 1px solid #c49292f5;
+    padding: 1vh 1vw;
+    border-radius: 20px;
   }
+
+  .under-line{
+    border-bottom: .2px dashed #58585893;
+    display: block;
+    height: 7vh;
+
+  }
+
+  @media screen and (max-width: 1024px){
+
+    .main-img img{
+      width: 100vw;
+      height: 60vh;
+    }
+
+    .pink-txt{
+      width: 98%;
+      font-size: 1rem;
+    }
 }
