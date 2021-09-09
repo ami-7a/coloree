@@ -150,6 +150,32 @@
     </header>
 
     <main class="main">
+
+      <!--CSS共通セクションタイトル-->
+      <section class="top-title">
+        <h1 class="section-title">Thanks to contact us</h1>
+        <p class="small-title">-お問い合わせありがとうございます-</p>
+      </section>
+
+      <!--共通 h2 class="pink-txt"-->
+      <h2 class="pink-txt">ご入力内容確認<i class="far fa-envelope"></i></h2 class="pink-txt">
+
+      <!--ここから編集-->
+      <div class="main">
+      <div class="display-contact">
+
+        <div class="form-item">■ 名前</div>
+        <!-- nameを受け取りechoしましょう -->
+        <?php echo $_POST['name']; ?>
+        <div class="form-item">■ 内容</div>
+        <!-- bodyを受け取りechoしましょう -->
+        <?php echo $_POST ["name2"]; ?>
+      </div>
+
+      </div>
+
+      
+     
       
     </main>
 
