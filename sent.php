@@ -80,7 +80,7 @@
             </li>
 
             <li>
-              <a href="contact.html" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
+              <a href="contact.php" target="_blank" rel="noopener"><span>お問い合わせ</span></a>
             </li>
 
 
@@ -118,7 +118,7 @@
 
           <!--無料相談はこちらボタン-->
           <div class="contactbtn">
-            <a href="contact.html" target="_blank" rel="noopener">
+            <a href="contact.php" target="_blank" rel="noopener">
               <span>＞ 無料相談はこちら</span>
             </a>
           </div>
@@ -161,7 +161,6 @@
       <h2 class="pink-txt">ご入力内容確認<i class="far fa-envelope"></i></h2 class="pink-txt">
 
       <!--ここから編集-->
-      <div class="main">
       <div class="display-contact">
 
         <div class="form-item">■ 名前</div>
@@ -172,7 +171,7 @@
         <?php echo $_POST ["name2"]; ?>
       </div>
 
-      </div>
+   
 
     </main>
 
