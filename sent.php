@@ -153,8 +153,8 @@
 
       <!--CSS共通セクションタイトル-->
       <section class="top-title">
-        <h1 class="section-title">Thanks to contact us</h1>
-        <p class="small-title">-お問い合わせありがとうございます-</p>
+        <h1 class="section-title">Thanks to contact us！</h1>
+        <p class="small-title">お問い合わせありがとうございます</p>
       </section>
 
       <!--共通 h2 class="pink-txt"-->
@@ -163,12 +163,27 @@
       <!--ここから編集-->
       <div class="display-contact">
 
-        <div class="form-item">■ 名前</div>
-        <!-- nameを受け取りechoしましょう -->
-        <?php echo $_POST['name']; ?>
-        <div class="form-item">■ 内容</div>
-        <!-- bodyを受け取りechoしましょう -->
-        <?php echo $_POST ["name2"]; ?>
+        <div class="form-item">■ お名前：<?php echo $_POST['name']; ?></div>
+        
+        <div class="form-item">■ ふりがな：<?php echo $_POST ["name2"]; ?></div>
+
+        <div class="form-item">■ ご年齢：<?php echo $_POST ["age"]; ?></div>
+
+        <div class="form-item">■ お住まいの都道府県：<?php echo $_POST ["live"]; ?></div>
+
+        <div class="form-item">■ メール：<?php echo $_POST ["email"]; ?></div>
+
+        <div class="form-item">■ お電話番号：<?php echo $_POST ["tell"]; ?></div>
+
+        <div class="form-item">■ お問い合わせ：<?php echo $_POST ["body"]; ?></div>
+        
+      </div>
+
+      <div class="thx-message">
+        <h3>お問い合わせいただきありがとうございます</h3>
+        <p>内容を確認し、３営業日以内に<br>メールにて返信させていただきます。</p>
+        <p>しばらくお待ちいただけますよう、<br>どうぞよろしくお願いいたします。</p>
+        <p>カラフル福岡結婚相談所</p>
       </div>
 
    

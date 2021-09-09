@@ -88,7 +88,7 @@
       </section>
 
       <!--共通ハンバーガーメニュー-->
-    <div id="hamburger">
+      <div id="hamburger">
       <p class="three_line_btn">
         <span></span>
         <span></span>
@@ -143,7 +143,7 @@
           </ul>
         </div>
       </nav>
-    </div>
+      </div>
 
 
 
@@ -174,7 +174,7 @@
         <input class="email" type="email" placeholder="メール" name="email">
         <input class="tell" type="tel" placeholder="お電話番号" name="tell">
 
-        <textarea id="message" type="text" placeholder="お問い合わせ"></textarea>
+        <textarea id="message" type="text" placeholder="お問い合わせ" name="body"></textarea>
         
         <input id="submit" type="submit" value="送信">
       </form>
