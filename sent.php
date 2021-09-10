@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colorful｜お問い合わせありがとうございます</title>
     <link rel="stylesheet" href="css/ress.css">
-    <link rel="stylesheet" type="text/css" href="css/sent.css">
+    <link rel="stylesheet" type="text/css" href="sent.css">
     <link rel="stylesheet" href="css/common.css">
     
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
