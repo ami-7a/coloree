@@ -7,7 +7,7 @@
     <title>Colorful｜お問い合わせありがとうございます</title>
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/sent.css">
+    <link rel="stylesheet" href="./css/sent.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
 
