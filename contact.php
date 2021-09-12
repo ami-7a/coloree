@@ -177,7 +177,7 @@
 
       <!--お問い合わせフォーム-->
       <form method="post" action="sent.php" id="form" class="topBefore">
-        <input type="hidden" name="tomail" value="colorful6668@gmail.com">
+        <input type="hidden" name="_to" value="ami7a121@gmail.com">
         <input type="hidden" name="tosubj" value="webサイトよりお問い合わせ">
         <input class="name" type="text" placeholder="お名前" name="name">
         <input class="name" type="text" placeholder="ふりがな" name="name2">
