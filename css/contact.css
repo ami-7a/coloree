@@ -55,7 +55,7 @@ textarea{
 
 /* オート入力した時の背景色調整 */
 input:-webkit-autofill {
-  box-shadow: 0 0 0 1000px #bda795 inset;
+  box-shadow: 0 0 0 1000px #f7ede5 inset;
 }
 
 
@@ -77,12 +77,11 @@ input:-webkit-autofill {
     height: auto;
     margin: 5vh auto 30vh;
     padding: 10%;
-    box-shadow: 10px 10px 0 #2e1806; /*背面の影 */
   }
   
   .form-center{
     width: 75vw;
-    margin-right: 3vw;
+    margin-right: 0vw;
     font-size: .8rem;
   }
   
