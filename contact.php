@@ -1,3 +1,81 @@
+<?php
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    // POSTでのアクセスでない場合
+    $name = '';
+    $email = '';
+    $subject = '';
+    $message = '';
+    $err_msg = '';
+    $complete_msg = '';
+
+} else {
+    // フォームがサブミットされた場合（POST処理）
+    // 入力された値を取得する
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // エラーメッセージ・完了メッセージの用意
+    $err_msg = '';
+    $complete_msg = '';
+
+    // 空チェック
+    if ($name == '' || $email == '' || $subject == '' || $message == '') {
+        $err_msg = '全ての項目を入力してください。';
+    }
+    
+    // エラーなし（全ての項目が入力されている）
+    if ($err_msg == '') {
+        $to = "colorful6668@gmail.com"; // 管理者のメールアドレスなど送信先
+        // Yudaiより下記を追加
+        $from = "Amy <" . $email . ">";
+
+        // Yudaiより下記の1行変更
+        // $headers = "From: " . $email . "\r\n"
+        // Yudaiより下記を追加
+        // 下記コメントアウトはコードの説明
+            // Content-Type – メール形式
+            // Return-Path – 送信先メールアドレスが受け取り不可の場合に、エラー通知のいくメールアドレス
+            // From – 送信者の名前（または組織名）とメールアドレス
+            // Sender – 送信者の名前（または組織名）とメールアドレス
+            // Reply-To – 受け取った人に表示される返信の宛先
+            // Organization – 送信者名（または組織名）
+            // X-Sender – 送信者のメールアドレス
+            // X-Priority – メールの重要度を表す
+        $headers = '';
+        $header .= "Content-Type: text/plain \r\n";
+        $header .= "Return-Path: " . $to . " \r\n";
+        $header .= "From: " . $from ." \r\n";
+        $header .= "Sender: " . $from ." \r\n";
+        $header .= "Reply-To: " . $email . " \r\n";
+        $header .= "Organization: " . $name . " \r\n";
+        $header .= "X-Sender: " . $email . " \r\n";
+        $header .= "X-Priority: 3 \r\n";
+
+
+        // 本文の最後に名前を追加
+        $message .= "\r\n\r\n" . $name;
+
+        // メール送信
+        mb_send_mail($to, $subject, $message, $headers);
+
+        // 完了メッセージ
+        $complete_msg = '送信されました！
+        <br>お問い合わせありがとうございます。<br>３日以内にメールにてご連絡いたします。<br>今しばらくお待ちください。';
+
+        // 全てクリア
+        $name = '';
+        $email = '';
+        $subject = '';
+        $message = '';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -175,21 +253,58 @@
       <h2 class="pink-txt">無料相談フォーム<i class="far fa-envelope"></i></h2>
       
 
-      <!--お問い合わせフォーム-->
-      <form method="post" action="sent.php" id="form" class="topBefore">
-        <input type="hidden" name="_to" value="ami7a121@gmail.com">
-        <input type="hidden" name="tosubj" value="webサイトよりお問い合わせ">
-        <input class="name" type="text" placeholder="お名前" name="name">
-        <input class="name" type="text" placeholder="ふりがな" name="name2">
-        <input class="age" type="age" placeholder="ご年齢" name="age">
-        <input class="live" type="text" placeholder="お住まいの都道府県" name="live">
-        <input class="email" type="email" placeholder="メール" name="email">
-        <input class="tell" type="tel" placeholder="お電話番号" name="tell">
+      <?php if ($err_msg != ''): ?>
+        <div class="alert alert-danger">
+      <?php echo $err_msg; ?>
+          </div>
+      <?php endif; ?>
 
-        <textarea id="message" type="text" placeholder="お問い合わせ" name="body"></textarea>
-        
-        <input id="submit" type="submit" value="送信">
+      <?php if ($complete_msg != ''): ?>
+          <div class="alert alert-success">
+              <?php echo $complete_msg; ?>
+          </div>
+      <?php endif; ?>
+            
+      <form class="form" method="post">
+
+        <li class="form-center">
+          
+            <!-- お名前 -->
+          <div class="txt-area">
+            <p>お名前</p>
+            <input type="text"  name="name"  value="<?php echo $name; ?>">
+          </div>
+          
+
+          <!-- メールアドレス -->
+          <div class="txt-area">
+            <p>メールアドレス</p>
+            <input type="text"  name="email"  value="<?php echo $email; ?>">
+          </div>
+          
+
+          <!-- 件名 -->
+          <div class="txt-area">
+            <p>件名</p>
+            <input type="text"  name="subject" value="<?php echo $subject; ?>">
+          </div>
+          
+
+          <!-- 本文 -->
+          <div class="txt-area">
+            <p>お問い合わせ内容</p>
+          <textarea  name="message" rows="4" ><?php echo $subject; ?></textarea>
+          </div>
+          
+
+          <div class="sent-btn">
+            <button type="submit">送信</button>
+          </div>
+
+        </li>
+
       </form>
+
 
     </main>
 
