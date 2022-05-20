@@ -7,8 +7,8 @@
 
 .mainvisual img{
   float: right;
-  width: 94vw;
-  height: 91vh;
+  width: 90vw;
+  height: 80vh;
   object-fit: cover;
 }
 
@@ -80,7 +80,7 @@
 
 /*お知らせかイベント*/
 .news-item { 
-  background: #e4bfbf;
+  background: #f3e1e1fd;
   border-radius: 5px;
   /* オレンジ部分の幅と高さ */
   width: 7vw;
@@ -173,7 +173,7 @@
   left: 0;
   width: 0;
   height: 0;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
 }
   
 .flex::after {
@@ -183,7 +183,7 @@
   right: 0;
   width: 0;
   height: 0;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
 }
 
   
@@ -217,7 +217,7 @@
 .fluid {
   width: 80vh;/*横幅*/
   height: 70vh;/*縦幅*/
-  background:#eec7c7a9;
+  background:#f3e1e1d9;
   animation: fluidrotate 30s ease 0s infinite;/*アニメーション設定*/
   position: absolute;
   top: -15%;
@@ -263,66 +263,10 @@
   margin: 0 auto;
 }
 
-/* SNSセクション */
-.sns{
-  height: auto;
+.contact .contact-txt{
+  margin-top: 5vh;
+  line-height: 4vh;
 }
-
-.sns-content{
-  display: flex;
-  width: 70%;
-  margin: 10vh auto 0vh;
-  position: relative;
-}
-
-.sns-content li{
-  width: 23%;
-  margin: 0 auto;
-  padding-left: 1vw;
-}
-
-/* ボタン全体 */
-.sns-btn{
-  display:inline-block;	
-  font-size: 40px;
-  text-decoration:none;
-  transition:.5s;
-  color: #424241;	
-  }
-
-  /* インスタ・ライン少し大きく */
-  .sns-btn .fa-instagram,
-  .sns-btn .fa-line{
-  font-size: 42px;
-  }
-
-  /* Instagramホバー時 */
-.sns-btn .fa-instagram:hover{
-  color:#c6529a;
-  }
-
-  /* LINEホバー時 */
-.sns-btn .fa-line:hover{
-  color:#00c300;
-  }
-  
-  /* メールアイコンホバー時 */
-  .sns-btn .fa-envelope:hover{
-  color:#fca83b;		
-  }
-
-/* 各アイコン 区切り線 */
-  .sns-content li+li:before {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 50%;
-    height: 16vh;
-    margin-top: -6.5vh;
-    margin-left: -4vw;
-    border-right: 1px solid #585858;
-  }
-
   
   @media screen and (max-width: 1024px){
 

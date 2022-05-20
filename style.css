@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* flex共通 */
+/* image共通 */
+/* ボタン共通 */
+h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 4vh;
+  color: #b99899;
+}
+
+p {
+  line-height: 5vh;
+}
+
+.main-img {
+  margin-top: 15vh;
+}
+
+.main-img img {
+  width: auto;
+  height: 80vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15vh;
+}
+
+.greeting li {
+  width: 50%;
+}
+
+.greeting li img {
+  width: auto;
+  height: 50vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.greeting li:nth-child(2) {
+  padding-left: 5vw;
+}
+
+.greeting li:nth-child(2) .ceo-name {
+  margin-top: 4vh;
+  font-family: 'WindSong', cursive;
+  font-size: 2rem;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  width: 70vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vh;
+}
+
+.intro li {
+  width: 50%;
+}
+
+.intro li img {
+  width: auto;
+  height: 50vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-left: 5vw;
+}
+
+.intro li:nth-child(1) {
+  padding-right: 4vw;
+}
+
+.service {
+  margin-top: 10vh;
+}
+
+.service .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service .flex li {
+  width: 30%;
+  margin-top: 2vh;
+}
+
+.service .flex li img {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+
+.service .flex li h3 {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #a5898a;
+  margin: 4vh auto 2vh;
+}
+
+.company {
+  margin-top: 20vh;
+  position: relative;
+}
+
+.company p {
+  margin: 1.5vh auto;
+}
+
+.company .tel {
+  border-bottom: 1px dotted #302c2579;
+  width: 10%;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */

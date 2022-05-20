@@ -39,7 +39,7 @@ li{
   top: 0;
   z-index: 99;
   width: 100vw;
-  height: 9vh;
+  height: 10vh;
   background-color: #faf1e9;
   /* flex関係 */
   display: flex;
@@ -93,9 +93,8 @@ li{
 #hamburger .three_line_btn span{
   position: absolute;
   width: 7vw;
-  height: 2px;
+  height: 1px;
   background: #9d9087;
-  border-radius: 5px;
   -webkit-transition: 1s ease-in-out;
   -moz-transition   : 1s ease-in-out;
   transition        : 1s ease-in-out;
@@ -250,7 +249,7 @@ li{
 
 .main{
   height: auto;
-  margin: 9vh auto;
+  margin: 8vh auto;
 }
 
 /*section-title共通*/
@@ -285,7 +284,7 @@ li{
   transform: translateY(-50%);
   width: 80px;
   height: 80px;
-  border: 3px solid #6e6e6e;
+  border: 1px solid #6e6e6e;
   border-radius: 50vh;
   transition: 0.3s;
 }
@@ -298,54 +297,91 @@ li{
   transform: translateY(-50%) rotate(45deg);
   width: 5px;
   height: 5px;
-  border-top: 2px solid #333;
-  border-right: 2px solid #333;
+  border-top: 1px solid rgb(94, 94, 94);
+  border-right: 1px solid rgb(74, 74, 74);
   transition: 0.3s;
 }
 
 .read-more-contact-btn a:hover::before {
-  background-color: #333;
+  background-color: rgb(84, 84, 84);
 }
 
 .read-more-contact-btn a:hover::after {
-  border-top: 2px solid #f2f2f2;
-  border-right: 2px solid #f2f2f2;
+  border-top: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
 }
 
 /* フッター */
 .footer{
   height: auto;
   display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20vh;
-  background-color: #cdbaad;
+  background-color: #d7cac1;
   color: #fafafa;
+  padding: 5vh 0vw;
 }
 
 .footer a{
   color: #fafafa;
 }
 
-.footer-left{
-  width: 50%;
+.footer li{
+  width: 30%;
 }
 
-.footer-left img{
+.footer li img{
   height: 20vh;
   width: 20vw;
   object-fit: contain;
 }
 
-.footer-right{
-  width: 50%;
-  margin: auto;
+
+/* SNSセクション */
+.sns{
+  height: auto;
 }
+
+
+/* ボタン全体 */
+.sns-btn{
+  display:inline-block;	
+  font-size: 40px;
+  text-decoration:none;
+  transition:.5s;
+  color: #424241;	
+  }
+
+  /* インスタ・ライン少し大きく */
+  .sns-btn .fa-instagram,
+  .sns-btn .fa-line{
+  font-size: 42px;
+  }
+
+  /* Instagramホバー時 */
+.sns-btn .fa-instagram:hover{
+  color:#c6529a;
+  }
+
+  /* LINEホバー時 */
+.sns-btn .fa-line:hover{
+  color:#00c300;
+  }
+  
+  /* メールアイコンホバー時 */
+  .sns-btn .fa-envelope:hover{
+  color:#fca83b;		
+  }
+
 
 /* コピーライト */
 .copy-right{
   height: auto;
   margin: 0vh auto;
   padding: 2vh 0vw;
-  background-color: #a18f85;
+  background-color: #b0a59d;
   color: #fafafa;
   font-size: .8rem;
 }
@@ -366,7 +402,7 @@ li{
   }
   
   .header{
-    height: 9vh;
+    height: 10vh;
     background-color: #faf1e9;
   }
 

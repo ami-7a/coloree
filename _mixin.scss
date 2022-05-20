@@ -1,0 +1,80 @@
+
+/* flex共通 */
+@mixin flex($width){
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: $width;
+  align-items: center;
+}
+
+/* image共通 */
+@mixin img($wd, $hi) {
+  width: $wd;
+  height: $hi;
+  object-fit: contain;
+}
+
+/* ボタン共通 */
+
+@mixin btn {
+  margin: 2vh auto 5vh;
+  padding: 1.5vh 2vw;
+  max-width: 19vw;
+  background-color: $background-color;
+  transition: 0.3s;
+  box-shadow: 5px 5px 10px #c7c4b6;
+  line-height: 5vh;
+}
+
+@mixin btn-hover {
+  text-decoration: none;
+  background-color: #dfdbcc;
+  box-shadow: 5px 5px 10px #918e85;
+}
+
+@mixin arrow($arrow-color){
+  padding-left: 2vw;
+  color: $arrow-color;
+}
+
+
+@mixin sns-btn($base-color){ /* snsボタン共通 */
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  font-size:30px;
+  text-decoration:none;
+  transition:.5s;
+
+  border:solid 1px $base-color;
+  color:$base-color;
+  // font-size:35px;
+  margin: 3vh 0vw 2vh .5vw;
+}
+
+@mixin sns-hover($sns-color) { /* sns hoverした時のカラー変化 */
+  border:solid 1px $sns-color;
+  background:$sns-color;
+  color:#fff;
+}
+
+@mixin sns-i{ /* アイコンを真ん中に */
+  position:absolute;
+  top:50%;
+  left:52%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+
+
+// レスポンシブ化
+@mixin sp {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
