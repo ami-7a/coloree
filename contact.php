@@ -97,7 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
-    <meta name="description" content="素敵な出会いのお手伝いを。福岡の結婚相談所、カラフルです。オンライン婚活、各種イベント、カウンセラー相談により、安心、楽しい婚活を！お気軽にご相談ください">
+    <meta name="description" content="Colorful福岡：
+    彩り豊かな毎日になるように、イベントやsalon、お悩みや相談をお聞ききいたします。">
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
