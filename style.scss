@@ -77,7 +77,7 @@ p{
 
     li{
       width: 28%;
-      margin: 3vh 2vw 5vh;
+      margin: 4vh 2vw 5vh;
 
       img{
         @include img(80%,80%);
@@ -94,6 +94,33 @@ p{
     }
 
     
+  }
+
+  .button a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh auto -5vh;
+    padding: 1em 1em;
+    width: 300px;
+    color: #9d7f80;
+    border: 1px solid #bb9b9de1;
+    border-radius: 50vh;
+  }
+  
+  .button a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #b99899;
+    border-right: 3px solid #b99899;
+    transform: rotate(45deg);
+  }
+  
+  .button a:hover {
+    transition: 1s;
+    text-decoration: none;
+    background-color: #ddcccde1;
   }
 }
 
@@ -223,3 +250,4 @@ p{
     
   }
 }
+
