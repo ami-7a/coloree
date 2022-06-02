@@ -57,6 +57,11 @@ p{
       padding-left: 5vw;
     }
 
+    .ceo-name{
+      margin-top: 4vh;
+      font-family: 'WindSong', cursive;
+      font-size: 2rem;
+    }
     
     &:nth-child(1){
       padding-right: 4vw;
@@ -68,11 +73,11 @@ p{
 .service{
   margin-top: 10vh;
   .flex{
-    @include flex(80vw);
+    @include flex(90vw);
 
     li{
-      width: 30%;
-      margin-top: 2vh;
+      width: 28%;
+      margin: 3vh 2vw 5vh;
 
       img{
         @include img(80%,80%);
@@ -83,9 +88,12 @@ p{
         font-weight: normal;
         font-size: 1.2rem;
         color: #a5898a;
-        margin: 4vh auto 2vh;
+        margin: 5vh auto 3vh;
       }
+
     }
+
+    
   }
 }
 
@@ -107,3 +115,111 @@ p{
 
 
 // @include sp
+
+
+@media screen and (max-width: 1024px){
+  p{
+    font-size: 0.75rem;
+  }
+
+  h2{
+    font-size: 1.5rem;
+    margin-top: 4vh;
+  }
+  
+  .main-img{
+    margin-top: 10vh;
+  
+    img{
+      @include img(auto, 80vh);
+      object-fit: cover;
+    }
+  }
+  
+  .greeting{
+    @include flex(90vw);
+    margin: 10vh auto;
+    flex-direction: column;
+    
+    li{
+      width: 100%;
+  
+      img{
+        @include img(auto,100vw);
+      }
+  
+      
+      &:nth-child(2){
+        padding: 0vh 2vw;
+  
+        .ceo-name{
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  
+  .intro{
+    @include flex(90vw);
+    flex-direction: column-reverse;
+    margin: 15vh auto;
+    
+    li{
+      width: 100%;
+  
+      img{
+        @include img(auto,100vw);
+        padding-left: 0vw;
+      }
+  
+      .ceo-name{
+        font-size: 1.3rem;
+      }
+      
+      &:nth-child(1){
+        padding: 0vh 2vw;
+      }
+    }
+  }
+  
+  
+  .service{
+    margin-top: 10vh;
+    .flex{
+      @include flex(85vw);
+      flex-direction: column;
+  
+      li{
+        width: 100%;
+        margin: 5vh auto;
+  
+        img{
+          @include img(60%,60%);
+        }
+  
+        h3{
+          font-weight: normal;
+          font-size: 1.2rem;
+          color: #a5898a;
+          margin: 5vh auto 3vh;
+        }
+  
+      }
+  
+      
+    }
+  }
+  
+  .company{
+    margin-top: 10vh;
+  
+    p{
+      margin: 1vh auto;
+    }
+  
+    .tel{
+      width: 28%;
+    }
+    
+  }
+}

@@ -28,9 +28,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
@@ -66,9 +65,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
@@ -91,6 +89,12 @@ p {
   padding-left: 5vw;
 }
 
+.intro li .ceo-name {
+  margin-top: 4vh;
+  font-family: 'WindSong', cursive;
+  font-size: 2rem;
+}
+
 .intro li:nth-child(1) {
   padding-right: 4vw;
 }
@@ -103,21 +107,20 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0 auto;
-  width: 80vw;
+  width: 90vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .service .flex li {
-  width: 30%;
-  margin-top: 2vh;
+  width: 28%;
+  margin: 3vh 2vw 5vh;
 }
 
 .service .flex li img {
@@ -132,7 +135,7 @@ p {
   font-weight: normal;
   font-size: 1.2rem;
   color: #a5898a;
-  margin: 4vh auto 2vh;
+  margin: 5vh auto 3vh;
 }
 
 .company {
@@ -148,5 +151,141 @@ p {
   border-bottom: 1px dotted #302c2579;
   width: 10%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 0.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 4vh;
+  }
+  .main-img {
+    margin-top: 10vh;
+  }
+  .main-img img {
+    width: auto;
+    height: 80vh;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .greeting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10vh auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .greeting li {
+    width: 100%;
+  }
+  .greeting li img {
+    width: auto;
+    height: 100vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .greeting li:nth-child(2) {
+    padding: 0vh 2vw;
+  }
+  .greeting li:nth-child(2) .ceo-name {
+    font-size: 1.3rem;
+  }
+  .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 15vh auto;
+  }
+  .intro li {
+    width: 100%;
+  }
+  .intro li img {
+    width: auto;
+    height: 100vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding-left: 0vw;
+  }
+  .intro li .ceo-name {
+    font-size: 1.3rem;
+  }
+  .intro li:nth-child(1) {
+    padding: 0vh 2vw;
+  }
+  .service {
+    margin-top: 10vh;
+  }
+  .service .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+    width: 85vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service .flex li {
+    width: 100%;
+    margin: 5vh auto;
+  }
+  .service .flex li img {
+    width: 60%;
+    height: 60%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .service .flex li h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: #a5898a;
+    margin: 5vh auto 3vh;
+  }
+  .company {
+    margin-top: 10vh;
+  }
+  .company p {
+    margin: 1vh auto;
+  }
+  .company .tel {
+    width: 28%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

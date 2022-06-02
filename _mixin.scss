@@ -2,7 +2,7 @@
 /* flex共通 */
 @mixin flex($width){
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
   width: $width;
